@@ -23,7 +23,10 @@ import {
   Activity,
   Award as MedalIcon,
   HelpCircle,
-  AlertCircle
+  AlertCircle,
+  Layers,
+  UserCheck,
+  Cpu
 } from "lucide-react";
 import { toast } from "sonner";
 import {
@@ -302,9 +305,16 @@ function ATSBlindspotPage() {
             <Link to="/analyze" className="hover:text-foreground transition-colors">Workspace</Link>
             <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
             <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
-            <span className="h-4 w-px bg-border/80" />
             <Link to="/ats-blindspots" className="text-brand font-medium flex items-center gap-1">
-              <Sparkles className="size-3.5" /> Blindspot Analyzer
+              <Sparkles className="size-3.5" /> Blindspots
+            </Link>
+            <span className="h-4 w-px bg-border/80" />
+            <Link to="/fit-intelligence" className="hover:text-foreground transition-colors flex items-center gap-1">
+              <Brain className="size-3.5" /> Fit Intelligence
+            </Link>
+            <span className="h-4 w-px bg-border/80" />
+            <Link to="/methodology" className="hover:text-foreground transition-colors flex items-center gap-1">
+              <Cpu className="size-3.5" /> Methodology
             </Link>
           </nav>
 
@@ -744,6 +754,13 @@ function ATSBlindspotPage() {
 
           {/* Action Buttons */}
           <div className="pt-2 flex flex-wrap justify-center gap-3">
+            <Link
+              to={`/candidate/${activeCandidate.id}`}
+              className="inline-flex h-10 items-center gap-1.5 rounded-full bg-brand text-white hover:scale-[1.01] px-5 text-sm font-semibold transition-all cursor-pointer shadow-sm"
+            >
+              <Brain className="size-4 text-white" /> View Candidate Report
+            </Link>
+
             <button
               onClick={() => handleToggleShortlist(activeCandidate.name)}
               className={`inline-flex h-10 items-center gap-1.5 rounded-full px-5 text-sm font-medium transition cursor-pointer ${

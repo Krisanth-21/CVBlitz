@@ -37,6 +37,354 @@ export const Route = createFileRoute("/candidate/$id")({
   component: CandidateReportPage,
 });
 
+const MOCK_SPECIAL_CANDIDATES: Record<string, { result: CandidateAnalysisResult, challenge: ChallengeCandidate }> = {
+  "CAND_0000088": {
+    result: {
+      id: "CAND_0000088",
+      name: "Ananya Patel",
+      role: "Senior Systems Engineer",
+      score: 91.0,
+      confidence: 94,
+      strengths: [
+        "Built recommendation systems at high scale",
+        "Production search infrastructure experience (Lucene/ES)",
+        "Strong Python engineering background (100k+ lines)",
+        "Demonstrated ranking-system adjacent expertise"
+      ],
+      weaknesses: [
+        "Missing exact keyword 'RAG' in CV",
+        "Missing exact keyword 'Pinecone'"
+      ],
+      isHoneypot: false,
+      honeypotReason: "",
+      verdict: "Strong Match. Demonstrates elite capability equivalence: their recommendation and search work directly translates to first-stage retrieval systems.",
+      tags: ["Top Match", "Semantic Gem", "Adjacent Expertise"],
+      details: {
+        id: "CAND_0000088",
+        name: "Ananya Patel",
+        role: "Senior Systems Engineer",
+        experienceYears: 7.2,
+        skills: ["Python", "SQL", "Elasticsearch", "Apache Lucene", "Spark", "Recommendation Systems", "Search Infrastructure", "System Design"],
+        recentCompany: "DataFlow Systems",
+        education: "B.Tech. in Computer Science, College of Engineering Pune",
+        location: "Pune, India",
+        behavioralSignals: {
+          recruiterResponseRate: 94,
+          githubActivity90d: 90,
+          interviewCompletionRate: 85
+        },
+        timeline: [
+          { role: "Senior Systems Engineer", company: "DataFlow Systems", period: "2023 - Present" },
+          { role: "Software Engineer II", company: "SearchCraft Tech", period: "2020 - 2023" },
+          { role: "Backend Engineer", company: "CloudScale Solutions", period: "2018 - 2020" }
+        ]
+      }
+    },
+    challenge: {
+      candidate_id: "CAND_0000088",
+      profile: {
+        anonymized_name: "Ananya Patel",
+        headline: "Senior Systems Engineer | Scale, Search & Recommendation Systems",
+        summary: "Systems-focused software engineer with 7+ years of experience building high-throughput search and recommendation pipelines. Proficient in Python, Java, Elasticsearch, Lucene, and Spark. Passionate about systems performance, distributed architecture, and data engineering. Looking to transition into AI retrieval and matching systems.",
+        location: "Pune",
+        country: "India",
+        years_of_experience: 7.2,
+        current_title: "Senior Systems Engineer",
+        current_company: "DataFlow Systems",
+        current_company_size: "501-1000",
+        current_industry: "Data Infrastructure"
+      },
+      career_history: [
+        {
+          company: "DataFlow Systems",
+          title: "Senior Systems Engineer",
+          start_date: "2023-04-01",
+          end_date: null,
+          duration_months: 38,
+          is_current: true,
+          industry: "Data Infrastructure",
+          company_size: "501-1000",
+          description: "Architected and managed high-scale recommendation engines handling 2M+ active users. Optimized index indexing pipelines on Apache Lucene, reducing query latencies by 35%. Wrote 100k+ lines of clean, production-grade Python and Java."
+        },
+        {
+          company: "SearchCraft Tech",
+          title: "Software Engineer II",
+          start_date: "2020-05-15",
+          end_date: "2023-03-31",
+          duration_months: 34,
+          is_current: false,
+          industry: "SaaS",
+          company_size: "201-500",
+          description: "Built search features using Elasticsearch clusters. Scaled data pipelines from batch processing to real-time stream ingestion."
+        }
+      ],
+      education: [
+        {
+          institution: "College of Engineering Pune",
+          degree: "B.Tech.",
+          field_of_study: "Computer Science",
+          start_year: 2014,
+          end_year: 2018,
+          grade: "9.1 CGPA",
+          tier: "tier_1"
+        }
+      ],
+      skills: [
+        { name: "Python", proficiency: "advanced", endorsements: 45, duration_months: 80 },
+        { name: "Elasticsearch", proficiency: "advanced", endorsements: 38, duration_months: 60 },
+        { name: "Apache Lucene", proficiency: "advanced", endorsements: 25, duration_months: 40 },
+        { name: "Recommendation Systems", proficiency: "advanced", endorsements: 30, duration_months: 36 }
+      ],
+      redrob_signals: {
+        profile_completeness_score: 96,
+        signup_date: "2019-06-12",
+        last_active_date: "2026-06-20",
+        open_to_work_flag: true,
+        profile_views_received_30d: 48,
+        applications_submitted_30d: 5,
+        recruiter_response_rate: 94,
+        avg_response_time_hours: 6,
+        connection_count: 450,
+        endorsements_received: 38,
+        notice_period_days: 30,
+        expected_salary_range_inr_lpa: "24-30 LPA",
+        preferred_work_mode: "hybrid",
+        willing_to_relocate: true,
+        github_activity_score: 90,
+        search_appearance_30d: 120,
+        saved_by_recruiters_30d: 14,
+        interview_completion_rate: 85,
+        offer_acceptance_rate: 80,
+        verified_email: true,
+        verified_phone: true,
+        linkedin_connected: true
+      }
+    }
+  },
+  "CAND_0000072": {
+    result: {
+      id: "CAND_0000072",
+      name: "Marcus Vance",
+      role: "Core Platforms Engineer",
+      score: 85.0,
+      confidence: 91,
+      strengths: [
+        "Built open source compilers and database engines",
+        "Deep systems performance and profiling expertise",
+        "Strong GitHub presence and open source contributions",
+        "Fast learner with excellent low-level indexing capabilities"
+      ],
+      weaknesses: [
+        "Lacks direct machine learning experience",
+        "Less product-centric background"
+      ],
+      isHoneypot: false,
+      honeypotReason: "",
+      verdict: "Strong adjacent potential. Possesses the core systems engineering skills required to build high-performance vector database indices from scratch.",
+      tags: ["Systems Specialist", "Open Source Core", "Elite Coder"],
+      details: {
+        id: "CAND_0000072",
+        name: "Marcus Vance",
+        role: "Core Platforms Engineer",
+        experienceYears: 6.5,
+        skills: ["Python", "C++", "Rust", "Compilers", "Distributed Systems", "Memory Indexing", "Low-level Network I/O"],
+        recentCompany: "Scylla Labs (Open Source)",
+        education: "B.Tech. in Computer Science, IIT Delhi",
+        location: "Noida, India",
+        behavioralSignals: {
+          recruiterResponseRate: 91,
+          githubActivity90d: 98,
+          interviewCompletionRate: 90
+        },
+        timeline: [
+          { role: "Core Platforms Engineer", company: "Scylla Labs", period: "2022 - Present" },
+          { role: "Systems Programmer", company: "KernelOps", period: "2020 - 2022" },
+          { role: "Tooling Engineer", company: "CodeForge", period: "2019 - 2020" }
+        ]
+      }
+    },
+    challenge: {
+      candidate_id: "CAND_0000072",
+      profile: {
+        anonymized_name: "Marcus Vance",
+        headline: "Core Platforms Engineer | Rust, C++ & Low-Level Systems",
+        summary: "Systems software developer with 6+ years of experience contributing to database cores and compilers. Deep knowledge of memory models, cache optimization, and network stack programming. Maintainer of open-source libraries with 5,000+ stars.",
+        location: "Noida",
+        country: "India",
+        years_of_experience: 6.5,
+        current_title: "Core Platforms Engineer",
+        current_company: "Scylla Labs (Open Source)",
+        current_company_size: "11-50",
+        current_industry: "Open Source Infrastructure"
+      },
+      career_history: [
+        {
+          company: "Scylla Labs (Open Source)",
+          title: "Core Platforms Engineer",
+          start_date: "2022-06-15",
+          end_date: null,
+          duration_months: 48,
+          is_current: true,
+          industry: "Open Source Infrastructure",
+          company_size: "11-50",
+          description: "Maintained core storage layers written in C++ and Rust. Implemented custom indexing mechanisms that improved query execution time by 40%."
+        }
+      ],
+      education: [
+        {
+          institution: "IIT Delhi",
+          degree: "B.Tech.",
+          field_of_study: "Computer Science",
+          start_year: 2015,
+          end_year: 2019,
+          grade: "9.4 CGPA",
+          tier: "tier_1"
+        }
+      ],
+      skills: [
+        { name: "Rust", proficiency: "advanced", endorsements: 65, duration_months: 48 },
+        { name: "C++", proficiency: "advanced", endorsements: 80, duration_months: 70 },
+        { name: "Systems Programming", proficiency: "advanced", endorsements: 55, duration_months: 60 }
+      ],
+      redrob_signals: {
+        profile_completeness_score: 98,
+        signup_date: "2020-03-04",
+        last_active_date: "2026-06-20",
+        open_to_work_flag: true,
+        profile_views_received_30d: 92,
+        applications_submitted_30d: 3,
+        recruiter_response_rate: 91,
+        avg_response_time_hours: 4,
+        connection_count: 500,
+        endorsements_received: 94,
+        notice_period_days: 15,
+        expected_salary_range_inr_lpa: "32-40 LPA",
+        preferred_work_mode: "hybrid",
+        willing_to_relocate: false,
+        github_activity_score: 98,
+        search_appearance_30d: 210,
+        saved_by_recruiters_30d: 25,
+        interview_completion_rate: 90,
+        offer_acceptance_rate: 85,
+        verified_email: true,
+        verified_phone: true,
+        linkedin_connected: true
+      }
+    }
+  },
+  "CAND_0000045": {
+    result: {
+      id: "CAND_0000045",
+      name: "Elena Rostova",
+      role: "Applied ML Scientist",
+      score: 91.0,
+      confidence: 95,
+      strengths: [
+        "Ph.D. in Computational Biology / NLP focus",
+        "Built similarity research indices and predictive models",
+        "Expert in mathematical embeddings and vector projections",
+        "Solid Python statistical engineering foundations"
+      ],
+      weaknesses: [
+        "Lacks commercial SaaS software engineering history",
+        "No direct experience with managed vector DB tools (Pinecone, etc.)"
+      ],
+      isHoneypot: false,
+      honeypotReason: "",
+      verdict: "High theoretical and practical modeling capability. Foundational knowledge in similarity metrics is a far deeper capability than simple API usage.",
+      tags: ["Applied Scientist", "PhD Graduate", "Vector Math Expert"],
+      details: {
+        id: "CAND_0000045",
+        name: "Elena Rostova",
+        role: "Applied ML Scientist",
+        experienceYears: 5.8,
+        skills: ["Python", "PyTorch", "NLP", "Similarity Research", "Mathematical Embeddings", "Statistical Testing", "Data Science"],
+        recentCompany: "BioInformatics Lab",
+        education: "Ph.D. in Computational Biology, IISc Bangalore",
+        location: "Pune, India",
+        behavioralSignals: {
+          recruiterResponseRate: 95,
+          githubActivity90d: 88,
+          interviewCompletionRate: 80
+        },
+        timeline: [
+          { role: "Applied ML Scientist", company: "BioInformatics Lab", period: "2023 - Present" },
+          { role: "Postdoctoral Researcher", company: "GenTech Inst", period: "2021 - 2023" },
+          { role: "ML Research Assistant", company: "IISc Lab", period: "2019 - 2021" }
+        ]
+      }
+    },
+    challenge: {
+      candidate_id: "CAND_0000045",
+      profile: {
+        anonymized_name: "Elena Rostova",
+        headline: "Applied ML Scientist | PhD NLP & Similarity Research",
+        summary: "Machine Learning scientist with 5+ years of experience researching and deploying neural similarity algorithms. Expert in NLP vector projections, high-dimensional space scaling, and statistical evaluation.",
+        location: "Pune",
+        country: "India",
+        years_of_experience: 5.8,
+        current_title: "Applied ML Scientist",
+        current_company: "BioInformatics Lab",
+        current_company_size: "11-50",
+        current_industry: "Research & Development"
+      },
+      career_history: [
+        {
+          company: "BioInformatics Lab",
+          title: "Applied ML Scientist",
+          start_date: "2023-08-01",
+          end_date: null,
+          duration_months: 34,
+          is_current: true,
+          industry: "Research & Development",
+          company_size: "11-50",
+          description: "Shipped genomic forecasting models to clinical platforms. Developed custom embedding alignment techniques in PyTorch for high-dimensional vector search."
+        }
+      ],
+      education: [
+        {
+          institution: "IISc Bangalore",
+          degree: "Ph.D.",
+          field_of_study: "Computational Biology",
+          start_year: 2016,
+          end_year: 2021,
+          grade: null,
+          tier: "tier_1"
+        }
+      ],
+      skills: [
+        { name: "Python", proficiency: "advanced", endorsements: 50, duration_months: 70 },
+        { name: "PyTorch", proficiency: "advanced", endorsements: 48, duration_months: 60 },
+        { name: "Natural Language Processing", proficiency: "advanced", endorsements: 42, duration_months: 50 }
+      ],
+      redrob_signals: {
+        profile_completeness_score: 95,
+        signup_date: "2021-09-01",
+        last_active_date: "2026-06-20",
+        open_to_work_flag: true,
+        profile_views_received_30d: 65,
+        applications_submitted_30d: 2,
+        recruiter_response_rate: 95,
+        avg_response_time_hours: 5,
+        connection_count: 320,
+        endorsements_received: 52,
+        notice_period_days: 60,
+        expected_salary_range_inr_lpa: "28-36 LPA",
+        preferred_work_mode: "hybrid",
+        willing_to_relocate: true,
+        github_activity_score: 88,
+        search_appearance_30d: 140,
+        saved_by_recruiters_30d: 18,
+        interview_completion_rate: 80,
+        offer_acceptance_rate: 75,
+        verified_email: true,
+        verified_phone: true,
+        linkedin_connected: true
+      }
+    }
+  }
+};
+
 function CandidateReportPage() {
   const { id } = Route.useParams();
   const navigate = useNavigate();
@@ -114,6 +462,10 @@ function CandidateReportPage() {
       }).sort((a, b) => b.score - a.score);
     }
 
+    if (MOCK_SPECIAL_CANDIDATES[id] && !activeResults.some((c) => c.id === id)) {
+      activeResults = [MOCK_SPECIAL_CANDIDATES[id].result, ...activeResults];
+    }
+
     setResults(activeResults);
     setJd(activeJd);
 
@@ -125,6 +477,8 @@ function CandidateReportPage() {
       const details = CHALLENGE_CANDIDATES.find((cc) => cc.candidate_id === found.id);
       if (details) {
         setChallengeDetails(details);
+      } else if (MOCK_SPECIAL_CANDIDATES[found.id]) {
+        setChallengeDetails(MOCK_SPECIAL_CANDIDATES[found.id].challenge);
       } else if (found.id === "CAND_0000099") {
         // Dmitry Vance mock challenge signals
         setChallengeDetails({

@@ -62,6 +62,12 @@ function Nav() {
           <Link to="/ats-blindspots" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
             <Sparkles className="size-3.5" /> Blindspots
           </Link>
+          <Link to="/fit-intelligence" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
+            <Brain className="size-3.5" /> Fit Intelligence
+          </Link>
+          <Link to="/methodology" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
+            <Cpu className="size-3.5" /> Methodology
+          </Link>
           <a href="#" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
             <Github className="size-4" /> GitHub
           </a>
@@ -383,8 +389,8 @@ function Features() {
   const feats = [
     { icon: Cpu, title: "Multi-Signal Ranking Engine", desc: "Evaluate candidates based on custom weights for technical skills, behavioral activity, career growth, location fit, and authenticity." },
     { icon: Sparkles, title: "ATS Blindspot Analyzer", desc: "Expose exactly why traditional ATS keyword filters reject top talent and discover matching semantic equivalence.", link: "/ats-blindspots" },
+    { icon: Brain, title: "Role-Candidate Fit Intelligence", desc: "Discover candidate semantic alignment and transferable capabilities beyond exact keyword density checks.", link: "/fit-intelligence" },
     { icon: ShieldCheck, title: "Honeypot Timelines Detection", desc: "Proactively flags resume inflation, overlapping employment dates, and impossible experience claims." },
-    { icon: Brain, title: "Explainable AI Verdicts", desc: "Recruiter-grade narrative assessments summarizing exactly why a candidate matched the target profile." },
     { icon: Scale, title: "Cohort Comparison Engine", desc: "Stack candidates side-by-side to compare profiles, timelines, skill gaps, and multi-signal metrics." },
     { icon: Layers, title: "Executive Intelligence Reports", desc: "Deep-dive detail reports featuring circular gauges, growth charts, risk notifications, and structured pagination." },
   ];
@@ -402,7 +408,7 @@ function Features() {
                 <div className="font-display text-lg font-medium">{f.title}</div>
                 <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
                 <div className="mt-4 inline-flex items-center gap-1 text-xs text-brand opacity-0 group-hover:opacity-100 transition">
-                  {f.link ? "Open Analyzer" : "Learn more"} <ChevronRight className="size-3" />
+                  {f.link ? (f.link.includes("blindspots") ? "Open Analyzer" : "Open Fit Intelligence") : "Learn more"} <ChevronRight className="size-3" />
                 </div>
               </>
             );

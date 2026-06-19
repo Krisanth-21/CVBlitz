@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResultsRouteImport } from './routes/results'
+import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as FitIntelligenceRouteImport } from './routes/fit-intelligence'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as AtsBlindspotsRouteImport } from './routes/ats-blindspots'
 import { Route as AnalyzeRouteImport } from './routes/analyze'
@@ -19,6 +21,16 @@ import { Route as CandidateIdRouteImport } from './routes/candidate.$id'
 const ResultsRoute = ResultsRouteImport.update({
   id: '/results',
   path: '/results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MethodologyRoute = MethodologyRouteImport.update({
+  id: '/methodology',
+  path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FitIntelligenceRoute = FitIntelligenceRouteImport.update({
+  id: '/fit-intelligence',
+  path: '/fit-intelligence',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompareRoute = CompareRouteImport.update({
@@ -52,6 +64,8 @@ export interface FileRoutesByFullPath {
   '/analyze': typeof AnalyzeRoute
   '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
+  '/fit-intelligence': typeof FitIntelligenceRoute
+  '/methodology': typeof MethodologyRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
 }
@@ -60,6 +74,8 @@ export interface FileRoutesByTo {
   '/analyze': typeof AnalyzeRoute
   '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
+  '/fit-intelligence': typeof FitIntelligenceRoute
+  '/methodology': typeof MethodologyRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
 }
@@ -69,6 +85,8 @@ export interface FileRoutesById {
   '/analyze': typeof AnalyzeRoute
   '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
+  '/fit-intelligence': typeof FitIntelligenceRoute
+  '/methodology': typeof MethodologyRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
 }
@@ -79,6 +97,8 @@ export interface FileRouteTypes {
     | '/analyze'
     | '/ats-blindspots'
     | '/compare'
+    | '/fit-intelligence'
+    | '/methodology'
     | '/results'
     | '/candidate/$id'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +107,8 @@ export interface FileRouteTypes {
     | '/analyze'
     | '/ats-blindspots'
     | '/compare'
+    | '/fit-intelligence'
+    | '/methodology'
     | '/results'
     | '/candidate/$id'
   id:
@@ -95,6 +117,8 @@ export interface FileRouteTypes {
     | '/analyze'
     | '/ats-blindspots'
     | '/compare'
+    | '/fit-intelligence'
+    | '/methodology'
     | '/results'
     | '/candidate/$id'
   fileRoutesById: FileRoutesById
@@ -104,6 +128,8 @@ export interface RootRouteChildren {
   AnalyzeRoute: typeof AnalyzeRoute
   AtsBlindspotsRoute: typeof AtsBlindspotsRoute
   CompareRoute: typeof CompareRoute
+  FitIntelligenceRoute: typeof FitIntelligenceRoute
+  MethodologyRoute: typeof MethodologyRoute
   ResultsRoute: typeof ResultsRoute
   CandidateIdRoute: typeof CandidateIdRoute
 }
@@ -115,6 +141,20 @@ declare module '@tanstack/react-router' {
       path: '/results'
       fullPath: '/results'
       preLoaderRoute: typeof ResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/methodology': {
+      id: '/methodology'
+      path: '/methodology'
+      fullPath: '/methodology'
+      preLoaderRoute: typeof MethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fit-intelligence': {
+      id: '/fit-intelligence'
+      path: '/fit-intelligence'
+      fullPath: '/fit-intelligence'
+      preLoaderRoute: typeof FitIntelligenceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compare': {
@@ -160,6 +200,8 @@ const rootRouteChildren: RootRouteChildren = {
   AnalyzeRoute: AnalyzeRoute,
   AtsBlindspotsRoute: AtsBlindspotsRoute,
   CompareRoute: CompareRoute,
+  FitIntelligenceRoute: FitIntelligenceRoute,
+  MethodologyRoute: MethodologyRoute,
   ResultsRoute: ResultsRoute,
   CandidateIdRoute: CandidateIdRoute,
 }

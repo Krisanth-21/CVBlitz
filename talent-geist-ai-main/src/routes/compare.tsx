@@ -24,7 +24,8 @@ import {
   ShieldCheck,
   TrendingUp,
   Layers,
-  ArrowRight
+  ArrowRight,
+  Cpu
 } from "lucide-react";
 import { CandidateAnalysisResult, SAMPLE_CANDIDATES } from "../lib/gemini";
 import { CHALLENGE_CANDIDATES, CHALLENGE_JD, ChallengeCandidate } from "../lib/challengeCandidates";
@@ -390,6 +391,13 @@ function ComparePage() {
               <Link to="/compare" className="text-brand font-medium transition-colors">Compare</Link>
               <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
                 <Sparkles className="size-3.5" /> Blindspots
+              </Link>
+              <Link to="/fit-intelligence" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Brain className="size-3.5" /> Fit Intelligence
+              </Link>
+              <span className="h-4 w-px bg-border/80" />
+              <Link to="/methodology" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Cpu className="size-3.5" /> Methodology
               </Link>
             </nav>
           </div>

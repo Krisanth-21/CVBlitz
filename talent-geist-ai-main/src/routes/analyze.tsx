@@ -261,12 +261,19 @@ function AnalyzePage() {
               </div>
               <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
             </a>
-            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground">
+            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground font-sans">
               <Link to="/analyze" className="text-brand font-medium transition-colors">Workspace</Link>
               <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
               <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
               <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
                 <Sparkles className="size-3.5" /> Blindspots
+              </Link>
+              <Link to="/fit-intelligence" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Brain className="size-3.5" /> Fit Intelligence
+              </Link>
+              <span className="h-4 w-px bg-border/80" />
+              <Link to="/methodology" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Cpu className="size-3.5" /> Methodology
               </Link>
             </nav>
           </div>
@@ -662,7 +669,7 @@ function AnalyzePage() {
               </div>
               <h3 className="font-display text-xl font-semibold">CVBlitz Intelligence Pipeline</h3>
               <p className="mt-1.5 text-xs text-muted-foreground">
-                Analyzing 100,000 profiles against job description using Gemini AI
+                Analyzing 100,000 profiles against job description
               </p>
 
               {/* Progress Steps */}
