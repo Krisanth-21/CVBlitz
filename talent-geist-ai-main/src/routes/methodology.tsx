@@ -1,5 +1,7 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { Header } from "../components/Header";
+import { triggerFileDownload } from "../lib/utils";
 import {
   ArrowLeft,
   Sparkles,
@@ -51,7 +53,40 @@ function MethodologyPage() {
 
   const handleDownloadReport = () => {
     toast.promise(
-      new Promise((resolve) => setTimeout(resolve, 1500)),
+      new Promise((resolve) => {
+        setTimeout(() => {
+          const content = `# CVBlitz Intelligence Architecture Report
+
+Technical documentation of the CVBlitz candidate evaluation methodology.
+Generated: ${new Date().toLocaleDateString()}
+
+## 🏗️ 4-Stage Candidate Processing Pipeline
+
+### 1. Job Description Ingestion
+Pasting the target job description (JD) launches the pipeline. Gemini extracts requirements, tech stacks, experience levels, tier-1 Indian locations, and notice period constraints dynamically.
+
+### 2. Resume & Feature Extraction
+Ingested candidates.jsonl dataset is parsed locally. Skills, roles, companies, education records, and Redrob behavioral signals are mapped into candidate feature vectors.
+
+### 3. Honeypot & Fraud Filter
+Detects timeline overlapping full-time positions and pre-release tool experience claims (e.g. Dmitry Vance's 12-year PyTorch claim). Any flagged profile has score capped to 0.
+
+### 4. Advanced Weighted Scoring
+Aggregates matching scores across five core parameters using custom recruiter weights:
+- **Technical Skills Fit**: 40% base weight
+- **Role Relevance & Seniority**: 25% base weight
+- **Behavioral Engagement**: 15% base weight
+- **Growth Potential**: 10% base weight
+- **Profile Authenticity**: 10% base weight
+
+---
+*Document Version: STARK v4.2.0*
+*Platform: CVBlitz AI Command Center*
+`;
+          triggerFileDownload("cvblitz_intelligence_architecture.md", content);
+          resolve(true);
+        }, 1200);
+      }),
       {
         loading: "Generating Methodology & Architecture PDF...",
         success: "CVBlitz Architecture Report downloaded successfully!",
@@ -103,47 +138,7 @@ function MethodologyPage() {
       </div>
 
       {/* Header Bar */}
-      <header className="sticky top-0 z-45 border-b border-border/40 backdrop-blur-xl bg-background/60">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => navigate({ to: "/" })}
-              className="grid size-8 place-items-center rounded-lg border border-border/80 bg-background hover:bg-muted text-muted-foreground hover:text-foreground transition cursor-pointer"
-            >
-              <ArrowLeft className="size-4" />
-            </button>
-            <div className="flex items-center gap-2">
-              <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
-                <Zap className="size-4 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
-            </div>
-          </div>
-          
-          <nav className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
-            <Link to="/analyze" className="hover:text-foreground transition-colors">Workspace</Link>
-            <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
-            <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
-            <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
-              <Sparkles className="size-3.5" /> Blindspots
-            </Link>
-            <Link to="/fit-intelligence" className="hover:text-foreground transition-colors flex items-center gap-1">
-              <Brain className="size-3.5" /> Fit Intelligence
-            </Link>
-            <span className="h-4 w-px bg-border/80" />
-            <Link to="/methodology" className="text-brand font-medium flex items-center gap-1">
-              <Cpu className="size-3.5" /> Methodology
-            </Link>
-          </nav>
-
-          <button
-            onClick={() => navigate({ to: "/analyze" })}
-            className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border/80 bg-card hover:bg-muted px-4 text-sm font-medium transition cursor-pointer"
-          >
-            Run New Analysis
-          </button>
-        </div>
-      </header>
+      <Header showBack backTo="/" />
 
       <main className="mx-auto max-w-7xl px-6 pt-8 space-y-8 animate-in fade-in duration-300">
         

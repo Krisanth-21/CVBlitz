@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Header } from "../components/Header";
 import {
   Sparkles, ArrowRight, Github, Play, ShieldCheck, Brain, Network, Search,
   AlertTriangle, Activity, Zap, Database, GitBranch, Layers, TrendingUp,
@@ -28,7 +29,7 @@ function Landing() {
         <div className="absolute bottom-0 left-0 h-[400px] w-[600px] rounded-full bg-[radial-gradient(closest-side,oklch(0.6_0.2_220/0.2),transparent)] blur-3xl" />
       </div>
 
-      <Nav />
+      <Header />
       <Hero />
       <Problem />
       <HowItWorks />
@@ -43,52 +44,7 @@ function Landing() {
   );
 }
 
-/* ─────────────────────────────  NAV  ───────────────────────────── */
-function Nav() {
-  const links = ["Features", "How It Works", "Ranking Engine", "Compare Engine", "Demo"];
-  return (
-    <header className="sticky top-0 z-50 border-b border-border/50 backdrop-blur-xl bg-background/60">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2">
-          <LogoMark />
-          <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          {links.map((l) => (
-            <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-foreground transition-colors">
-              {l}
-            </a>
-          ))}
-          <Link to="/ats-blindspots" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
-            <Sparkles className="size-3.5" /> Blindspots
-          </Link>
-          <Link to="/fit-intelligence" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
-            <Brain className="size-3.5" /> Fit Intelligence
-          </Link>
-          <Link to="/methodology" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
-            <Cpu className="size-3.5" /> Methodology
-          </Link>
-          <a href="#" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
-            <Github className="size-4" /> GitHub
-          </a>
-        </nav>
-        <div className="flex items-center gap-3">
-          <Link to="/analyze" className="group relative inline-flex h-9 items-center gap-1.5 rounded-full bg-foreground px-4 text-sm font-medium text-background hover:opacity-90 transition">
-            Get Started <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
-function LogoMark() {
-  return (
-    <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow glow-brand">
-      <Zap className="size-4 text-white" strokeWidth={2.5} />
-    </div>
-  );
-}
 
 /* ─────────────────────────────  HERO  ───────────────────────────── */
 function Hero() {
@@ -801,6 +757,14 @@ function FinalCTA() {
         </div>
       </div>
     </section>
+  );
+}
+
+function LogoMark() {
+  return (
+    <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-[#ff7759] to-[#1863dc] shadow-sm">
+      <Zap className="size-4 text-white" strokeWidth={2.5} />
+    </div>
   );
 }
 

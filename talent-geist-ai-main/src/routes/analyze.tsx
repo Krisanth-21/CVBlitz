@@ -1,5 +1,7 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
+import { Header } from "../components/Header";
+import { triggerFileDownload } from "../lib/utils";
 import {
   Sparkles,
   UploadCloud,
@@ -20,7 +22,8 @@ import {
   TrendingUp,
   Award,
   AlertTriangle,
-  Info
+  Info,
+  Download
 } from "lucide-react";
 import { extractRequirements, analyzeCandidates } from "../lib/gemini";
 import { CHALLENGE_JD } from "../lib/challengeCandidates";
@@ -160,6 +163,48 @@ function AnalyzePage() {
     }
   };
 
+  const handleDownloadTemplate = () => {
+    const templateContent = `[
+  {
+    "candidate_id": "CAND_000001",
+    "profile": {
+      "anonymized_name": "A. Iyer",
+      "current_title": "Senior AI Engineer",
+      "years_of_experience": 8,
+      "location": "Bangalore",
+      "country": "India",
+      "current_company": "VectorTech Solutions"
+    },
+    "skills": [
+      { "name": "Python", "experience_years": 7 },
+      { "name": "PyTorch", "experience_years": 5 },
+      { "name": "Pinecone", "experience_years": 3 }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech",
+        "field_of_study": "Computer Science",
+        "institution": "IIT Madras"
+      }
+    ],
+    "redrob_signals": {
+      "recruiter_response_rate": 0.95,
+      "github_activity_score": 85,
+      "interview_completion_rate": 0.90
+    },
+    "experience": [
+      {
+        "role": "Senior AI Engineer",
+        "company": "VectorTech Solutions",
+        "period": "2023 - Present"
+      }
+    ]
+  }
+]`;
+    triggerFileDownload("candidate_dataset_template.json", templateContent, "application/json");
+    toast.success("Downloaded candidate dataset template.json");
+  };
+
   const handleJdUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
@@ -252,38 +297,7 @@ function AnalyzePage() {
       </div>
 
       {/* Header Bar */}
-      <header className="sticky top-0 z-40 border-b border-border/40 backdrop-blur-xl bg-background/60">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <a href="/" className="flex items-center gap-2">
-              <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
-                <Zap className="size-4 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
-            </a>
-            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground font-sans">
-              <Link to="/analyze" className="text-brand font-medium transition-colors">Workspace</Link>
-              <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
-              <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
-              <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
-                <Sparkles className="size-3.5" /> Blindspots
-              </Link>
-              <Link to="/fit-intelligence" className="hover:text-foreground transition-colors flex items-center gap-1">
-                <Brain className="size-3.5" /> Fit Intelligence
-              </Link>
-              <span className="h-4 w-px bg-border/80" />
-              <Link to="/methodology" className="hover:text-foreground transition-colors flex items-center gap-1">
-                <Cpu className="size-3.5" /> Methodology
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="rounded-full border border-brand/20 bg-brand/5 px-2.5 py-1 font-mono text-[11px] text-brand flex items-center gap-1.5">
-              <span className="size-1.5 rounded-full bg-brand animate-pulse" /> Gemini AI Engine Active
-            </span>
-          </div>
-        </div>
-      </header>
+      <Header showBack backTo="/" />
 
       <main className="mx-auto max-w-7xl px-6 pt-10">
         {/* Title Section */}
@@ -453,6 +467,15 @@ function AnalyzePage() {
                 </div>
                 <div className="text-sm font-medium">Drop candidates.jsonl here or browse files</div>
                 <div className="mt-1 text-xs text-muted-foreground">Supports JSONL, JSON, CSV (up to 500MB)</div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDownloadTemplate();
+                  }}
+                  className="mt-3.5 inline-flex items-center gap-1.5 text-xs text-brand hover:underline font-semibold cursor-pointer z-20 relative"
+                >
+                  <Download className="size-3.5" /> Download Candidate Template (.json)
+                </button>
                 <input
                   id="dataset-file-input"
                   type="file"
