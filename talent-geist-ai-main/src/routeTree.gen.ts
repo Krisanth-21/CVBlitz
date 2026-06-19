@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as CompareRouteImport } from './routes/compare'
+import { Route as AtsBlindspotsRouteImport } from './routes/ats-blindspots'
 import { Route as AnalyzeRouteImport } from './routes/analyze'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CandidateIdRouteImport } from './routes/candidate.$id'
@@ -23,6 +24,11 @@ const ResultsRoute = ResultsRouteImport.update({
 const CompareRoute = CompareRouteImport.update({
   id: '/compare',
   path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtsBlindspotsRoute = AtsBlindspotsRouteImport.update({
+  id: '/ats-blindspots',
+  path: '/ats-blindspots',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AnalyzeRoute = AnalyzeRouteImport.update({
@@ -44,6 +50,7 @@ const CandidateIdRoute = CandidateIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/analyze': typeof AnalyzeRoute
+  '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/analyze': typeof AnalyzeRoute
+  '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
@@ -59,21 +67,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/analyze': typeof AnalyzeRoute
+  '/ats-blindspots': typeof AtsBlindspotsRoute
   '/compare': typeof CompareRoute
   '/results': typeof ResultsRoute
   '/candidate/$id': typeof CandidateIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/analyze' | '/compare' | '/results' | '/candidate/$id'
+  fullPaths:
+    | '/'
+    | '/analyze'
+    | '/ats-blindspots'
+    | '/compare'
+    | '/results'
+    | '/candidate/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/analyze' | '/compare' | '/results' | '/candidate/$id'
-  id: '__root__' | '/' | '/analyze' | '/compare' | '/results' | '/candidate/$id'
+  to:
+    | '/'
+    | '/analyze'
+    | '/ats-blindspots'
+    | '/compare'
+    | '/results'
+    | '/candidate/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/analyze'
+    | '/ats-blindspots'
+    | '/compare'
+    | '/results'
+    | '/candidate/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AnalyzeRoute: typeof AnalyzeRoute
+  AtsBlindspotsRoute: typeof AtsBlindspotsRoute
   CompareRoute: typeof CompareRoute
   ResultsRoute: typeof ResultsRoute
   CandidateIdRoute: typeof CandidateIdRoute
@@ -93,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/compare'
       fullPath: '/compare'
       preLoaderRoute: typeof CompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ats-blindspots': {
+      id: '/ats-blindspots'
+      path: '/ats-blindspots'
+      fullPath: '/ats-blindspots'
+      preLoaderRoute: typeof AtsBlindspotsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/analyze': {
@@ -122,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AnalyzeRoute: AnalyzeRoute,
+  AtsBlindspotsRoute: AtsBlindspotsRoute,
   CompareRoute: CompareRoute,
   ResultsRoute: ResultsRoute,
   CandidateIdRoute: CandidateIdRoute,

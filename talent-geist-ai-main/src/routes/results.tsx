@@ -219,11 +219,19 @@ function ResultsPage() {
               <ArrowLeft className="size-4" />
             </button>
             <div className="flex items-center gap-2">
-              <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
+              <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow font-display">
                 <Zap className="size-4 text-white" strokeWidth={2.5} />
               </div>
               <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
             </div>
+            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground">
+              <Link to="/analyze" className="hover:text-foreground transition-colors">Workspace</Link>
+              <Link to="/results" className="text-brand font-medium transition-colors">Rankings</Link>
+              <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
+              <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Sparkles className="size-3.5" /> Blindspots
+              </Link>
+            </nav>
           </div>
           <button
             onClick={() => navigate({ to: "/analyze" })}

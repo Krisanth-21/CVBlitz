@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import {
   Sparkles,
@@ -254,12 +254,22 @@ function AnalyzePage() {
       {/* Header Bar */}
       <header className="sticky top-0 z-40 border-b border-border/40 backdrop-blur-xl bg-background/60">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-2">
-            <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
-              <Zap className="size-4 text-white" strokeWidth={2.5} />
-            </div>
-            <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-2">
+              <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
+                <Zap className="size-4 text-white" strokeWidth={2.5} />
+              </div>
+              <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
+            </a>
+            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground">
+              <Link to="/analyze" className="text-brand font-medium transition-colors">Workspace</Link>
+              <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
+              <Link to="/compare" className="hover:text-foreground transition-colors">Compare</Link>
+              <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Sparkles className="size-3.5" /> Blindspots
+              </Link>
+            </nav>
+          </div>
           <div className="flex items-center gap-2">
             <span className="rounded-full border border-brand/20 bg-brand/5 px-2.5 py-1 font-mono text-[11px] text-brand flex items-center gap-1.5">
               <span className="size-1.5 rounded-full bg-brand animate-pulse" /> Gemini AI Engine Active

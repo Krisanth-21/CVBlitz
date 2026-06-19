@@ -382,8 +382,16 @@ function ComparePage() {
               <div className="relative grid size-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-brand-glow">
                 <Users className="size-4 text-white animate-pulse" />
               </div>
-              <span className="font-display text-lg font-semibold tracking-tight">CVBlitz Compare</span>
+              <span className="font-display text-lg font-semibold tracking-tight">CVBlitz</span>
             </div>
+            <nav className="hidden md:flex items-center gap-4 ml-6 text-sm text-muted-foreground">
+              <Link to="/analyze" className="hover:text-foreground transition-colors">Workspace</Link>
+              <Link to="/results" className="hover:text-foreground transition-colors">Rankings</Link>
+              <Link to="/compare" className="text-brand font-medium transition-colors">Compare</Link>
+              <Link to="/ats-blindspots" className="hover:text-foreground transition-colors flex items-center gap-1">
+                <Sparkles className="size-3.5" /> Blindspots
+              </Link>
+            </nav>
           </div>
           <button
             onClick={() => navigate({ to: "/results" })}

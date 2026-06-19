@@ -59,6 +59,9 @@ function Nav() {
               {l}
             </a>
           ))}
+          <Link to="/ats-blindspots" className="text-brand font-medium hover:opacity-90 transition-colors flex items-center gap-1">
+            <Sparkles className="size-3.5" /> Blindspots
+          </Link>
           <a href="#" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
             <Github className="size-4" /> GitHub
           </a>
@@ -379,7 +382,7 @@ function HowItWorks() {
 function Features() {
   const feats = [
     { icon: Cpu, title: "Multi-Signal Ranking Engine", desc: "Evaluate candidates based on custom weights for technical skills, behavioral activity, career growth, location fit, and authenticity." },
-    { icon: Activity, title: "Behavioral Intelligence Gauges", desc: "Circular indicators tracking real-time responsiveness, GitHub commit logs, interview completions, and offer acceptances." },
+    { icon: Sparkles, title: "ATS Blindspot Analyzer", desc: "Expose exactly why traditional ATS keyword filters reject top talent and discover matching semantic equivalence.", link: "/ats-blindspots" },
     { icon: ShieldCheck, title: "Honeypot Timelines Detection", desc: "Proactively flags resume inflation, overlapping employment dates, and impossible experience claims." },
     { icon: Brain, title: "Explainable AI Verdicts", desc: "Recruiter-grade narrative assessments summarizing exactly why a candidate matched the target profile." },
     { icon: Scale, title: "Cohort Comparison Engine", desc: "Stack candidates side-by-side to compare profiles, timelines, skill gaps, and multi-signal metrics." },
@@ -390,18 +393,38 @@ function Features() {
       <div className="mx-auto max-w-7xl">
         <SectionHeader eyebrow="Platform" title="Built for the way elite recruiters actually think." />
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border/60 bg-border/60 md:grid-cols-3">
-          {feats.map((f) => (
-            <div key={f.title} className="group bg-background/80 p-7 hover:bg-card/60 transition">
-              <div className="mb-5 grid size-10 place-items-center rounded-lg bg-card border border-border/60 text-brand">
-                <f.icon className="size-5" />
+          {feats.map((f) => {
+            const cardContent = (
+              <>
+                <div className="mb-5 grid size-10 place-items-center rounded-lg bg-card border border-border/60 text-brand">
+                  <f.icon className="size-5" />
+                </div>
+                <div className="font-display text-lg font-medium">{f.title}</div>
+                <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+                <div className="mt-4 inline-flex items-center gap-1 text-xs text-brand opacity-0 group-hover:opacity-100 transition">
+                  {f.link ? "Open Analyzer" : "Learn more"} <ChevronRight className="size-3" />
+                </div>
+              </>
+            );
+
+            if (f.link) {
+              return (
+                <Link
+                  key={f.title}
+                  to={f.link}
+                  className="group bg-background/80 p-7 hover:bg-card/60 transition block cursor-pointer"
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div key={f.title} className="group bg-background/80 p-7 hover:bg-card/60 transition">
+                {cardContent}
               </div>
-              <div className="font-display text-lg font-medium">{f.title}</div>
-              <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
-              <div className="mt-4 inline-flex items-center gap-1 text-xs text-brand opacity-0 group-hover:opacity-100 transition">
-                Learn more <ChevronRight className="size-3" />
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
