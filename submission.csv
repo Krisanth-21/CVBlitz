@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0040200,1,0.917,"Strong behavioral profile: response rate 52%, GitHub activity score not available. Currently AI Research Engineer at PharmEasy with 5.5 years total experience in Python and Weaviate. Note: Long notice period (90 days) might require buyout."
+CAND_0036379,2,0.89,"Senior Software Engineer at Zoho based in Chennai, Tamil Nadu. 7.4 years of experience with Elasticsearch and Milvus. available in 60 days."
+CAND_0095619,3,0.873,Demonstrated depth in Elasticsearch and Pinecone across 15.6 years. Currently NLP Engineer at Nykaa. Behavioral engagement is high.
+CAND_0094728,4,0.856,"Mid-level profile with 6.5 years, currently AI Specialist at Swiggy. Skilled in Qdrant and RAG with strong career growth signals."
+CAND_0025882,5,0.825,5.6 years experience as Senior Software Engineer (ML) at Freshworks with Milvus. Engagement metrics are acceptable.
+CAND_0069220,6,0.814,"5.6 years as ML Engineer at Paytm, with hands-on expertise in Python and Milvus. Career trajectory shows moderate upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0091039,7,0.781,"Strong behavioral profile: response rate 87%, GitHub activity score not available. Currently AI Specialist at Sarvam AI with 6.8 years total experience in Python and RAG. Note: Long notice period (120 days) might require buyout."
+CAND_0000422,8,0.779,"AI Research Engineer at Haptik based in Kolkata, West Bengal. 6.3 years of experience with Python and Milvus. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0021100,9,0.778,Demonstrated depth in Elasticsearch and Sql across 7.0 years. Currently Data Engineer at PharmEasy. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0048558,10,0.775,"Mid-level profile with 6.7 years, currently Data Scientist at Rephrase.ai. Skilled in Elasticsearch and Spark with developing career growth signals."
+CAND_0069718,11,0.771,5.7 years experience as ML Engineer at Saarthi.ai with Elasticsearch and Spark. Engagement metrics are acceptable.
+CAND_0052744,12,0.769,"4.9 years as Senior Software Engineer (ML) at Niramai, with hands-on expertise in Pinecone and Weaviate. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0063037,13,0.764,"Strong behavioral profile: response rate 41%, GitHub activity score not available. Currently Software Engineer at PhonePe with 5.7 years total experience in RAG. Note: Long notice period (120 days) might require buyout."
+CAND_0054859,14,0.763,"Senior Software Engineer (ML) at Ola based in Noida, Uttar Pradesh. 6.9 years of experience with Prompt engineering and Apache beam. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0088438,15,0.762,Demonstrated depth in Python and Pinecone across 6.6 years. Currently Senior Software Engineer (ML) at Saarthi.ai. Behavioral engagement is moderate. Note: Long notice period (120 days) might require buyout.
+CAND_0085372,16,0.756,"Mid-level profile with 7.4 years, currently Data Analyst at Ola. Skilled in Milvus and Qdrant with developing career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0041696,17,0.755,6.2 years experience as Senior Software Engineer (ML) at Saarthi.ai with Weaviate. Concern: below-average behavioral signals.
+CAND_0046595,18,0.755,"5.6 years as Software Engineer at Freshworks, with hands-on expertise in Python and Elasticsearch. Career trajectory shows strong upward growth."
+CAND_0079176,19,0.754,"Strong behavioral profile: response rate 73%, GitHub activity score not available. Currently AI Specialist at Haptik with 5.3 years total experience in Pinecone and Qdrant. Note: Long notice period (120 days) might require buyout."
+CAND_0008486,20,0.745,"Software Engineer at PharmEasy based in Trivandrum, Kerala. 7.9 years of experience with Pinecone and Milvus. available in 60 days."
+CAND_0077031,21,0.74,Demonstrated depth in Python and Sql across 5.0 years. Currently Software Engineer at Paytm. Behavioral engagement is moderate.
+CAND_0035764,22,0.737,"Mid-level profile with 6.8 years, currently Senior Software Engineer (ML) at Zomato. Skilled in Elasticsearch and Weaviate with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0057736,23,0.737,6.2 years experience as Computer Vision Engineer at Mad Street Den with Weaviate and Qdrant. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
+CAND_0053527,24,0.734,"7.0 years as Junior ML Engineer at PhonePe, with hands-on expertise in Pinecone and Qdrant. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0022570,25,0.733,"Strong behavioral profile: response rate 72%, GitHub activity score not available. Currently Analytics Engineer at TCS with 7.0 years total experience in Elasticsearch and Weaviate."
+CAND_0078810,26,0.733,Senior Software Engineer (ML) at Dream11 based in Sydney. 6.9 years of experience with Elasticsearch and Langchain. available in 120 days. Note: Long notice period (120 days) might require buyout.
+CAND_0085857,27,0.732,Demonstrated depth in Spark and Sql across 8.0 years. Currently Senior Software Engineer at Swiggy. Behavioral engagement is moderate. Note: Long notice period (120 days) might require buyout.
+CAND_0043958,28,0.73,"Mid-level profile with 6.7 years, currently AI Research Engineer at Dream11. Skilled in Ci/cd and Sentence transformers with developing career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0076381,29,0.729,7.6 years experience as Backend Engineer at Vedantu with Python and Milvus. Concern: below-average behavioral signals. Note: Long notice period (90 days) might require buyout.
+CAND_0088441,30,0.726,"6.5 years as AI Specialist at Sarvam AI, with hands-on expertise in Milvus and Qdrant. Career trajectory shows moderate upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0067717,31,0.724,"Strong behavioral profile: response rate 39%, GitHub activity score not available. Currently AI Specialist at Aganitha with 6.9 years total experience in Python and Pytorch."
+CAND_0011489,32,0.722,ML Engineer at Glance based in Toronto. 5.8 years of experience with Python and RAG. available in 60 days.
+CAND_0084460,33,0.719,Demonstrated depth in Pinecone and Milvus across 5.6 years. Currently Senior Software Engineer (ML) at upGrad. Behavioral engagement is moderate.
+CAND_0044248,34,0.718,"Mid-level profile with 6.9 years, currently Junior ML Engineer at upGrad. Skilled in Computer vision and Hugging face transformers with strong career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0099751,35,0.718,5.5 years experience as Junior ML Engineer at Observe.AI with Weaviate. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
+CAND_0077798,36,0.717,"8.0 years as Software Engineer at Meesho, with hands-on expertise in Weaviate. Career trajectory shows strong upward growth."
+CAND_0007241,37,0.716,"Strong behavioral profile: response rate 51%, GitHub activity score not available. Currently Backend Engineer at CRED with 7.2 years total experience in Pinecone and Weaviate. Note: Long notice period (120 days) might require buyout."
+CAND_0032887,38,0.716,ML Engineer at Niramai based in Singapore. 6.1 years of experience with Elasticsearch and Qdrant. available in 45 days.
+CAND_0081563,39,0.711,Demonstrated depth in Pytorch and Pinecone across 6.9 years. Currently ML Engineer at Dream11. Behavioral engagement is moderate.
+CAND_0007590,40,0.709,"Mid-level profile with 7.7 years, currently Senior Data Engineer at InMobi. Skilled in Weaviate and Milvus with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0071663,41,0.709,5.0 years experience as Data Analyst at Accenture with RAG. Engagement metrics are acceptable.
+CAND_0008218,42,0.704,"7.0 years as Senior Software Engineer (ML) at Aganitha, with hands-on expertise in Sql and Milvus. Career trajectory shows strong upward growth."
+CAND_0001494,43,0.701,"Strong behavioral profile: response rate 30%, GitHub activity score 53.40. Currently Data Scientist at Haptik with 6.4 years total experience in Weaviate and RAG. Note: Long notice period (90 days) might require buyout."
+CAND_0031397,44,0.701,"Junior ML Engineer at Observe.AI based in Vizag, Andhra Pradesh. 6.6 years of experience with RAG. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0091229,45,0.701,Demonstrated depth in Elasticsearch and Qdrant across 7.0 years. Currently Senior Software Engineer (ML) at Niramai. Behavioral engagement is moderate.
+CAND_0050425,46,0.698,"Mid-level profile with 7.3 years, currently Data Engineer at upGrad. Skilled in Python and Elasticsearch with developing career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0062772,47,0.697,6.6 years experience as Senior Software Engineer (ML) at Vedantu with Elasticsearch and Milvus. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
+CAND_0000165,48,0.696,"6.8 years as AI Specialist at Mad Street Den, with hands-on expertise in Qdrant. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0053472,49,0.695,"Strong behavioral profile: response rate 27%, GitHub activity score not available. Currently Senior Software Engineer (ML) at HCL with 6.5 years total experience in Python and Milvus. Note: Long notice period (120 days) might require buyout."
+CAND_0068434,50,0.695,"Backend Engineer at CRED based in Kolkata, West Bengal. 7.5 years of experience with Elasticsearch and RAG. available in 60 days."
+CAND_0004848,51,0.694,Demonstrated depth in Pinecone and Weaviate across 5.7 years. Currently Junior ML Engineer at Freshworks. Behavioral engagement is moderate.
+CAND_0016170,52,0.693,"Mid-level profile with 6.8 years, currently AI Research Engineer at Dream11. Skilled in Langchain and RAG with developing career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0076136,53,0.692,6.2 years experience as Senior Software Engineer at Nykaa with RAG. Concern: below-average behavioral signals. Note: Long notice period (120 days) might require buyout.
+CAND_0098624,54,0.692,"6.3 years as Senior Software Engineer (ML) at CRED, with hands-on expertise in Sql and Qdrant. Career trajectory shows strong upward growth."
+CAND_0003756,55,0.69,"Strong behavioral profile: response rate 38%, GitHub activity score 66.00. Currently Senior Software Engineer (ML) at Nykaa with 6.5 years total experience in Elasticsearch. Note: Long notice period (90 days) might require buyout."
+CAND_0053300,56,0.688,"Data Analyst at Dream11 based in Kochi, Kerala. 7.4 years of experience with Cnn and Embeddings. immediately available."
+CAND_0059075,57,0.687,Demonstrated depth in Milvus across 4.1 years. Currently Software Engineer at CRED. Behavioral engagement is high.
+CAND_0099825,58,0.687,"Mid-level profile with 5.7 years, currently Junior ML Engineer at Sarvam AI. Skilled in Elasticsearch and RAG with strong career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0088842,59,0.686,6.3 years experience as Analytics Engineer at PolicyBazaar with Elasticsearch and Pinecone. Concern: below-average behavioral signals. Note: Long notice period (90 days) might require buyout.
+CAND_0019504,60,0.685,"5.8 years as Senior Software Engineer at Flipkart, with hands-on expertise in Milvus and Qdrant. Career trajectory shows moderate upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0044850,61,0.683,"Strong behavioral profile: response rate 73%, GitHub activity score 74.20. Currently Backend Engineer at upGrad with 6.9 years total experience in Pinecone and RAG. Note: Long notice period (120 days) might require buyout."
+CAND_0057209,62,0.682,"Backend Engineer at Cognizant based in Kolkata, West Bengal. 6.2 years of experience with RAG. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0061969,63,0.682,Demonstrated depth in Python across 6.7 years. Currently Senior Data Engineer at Swiggy. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0058938,64,0.681,"Mid-level profile with 5.5 years, currently Software Engineer at Razorpay. Skilled in Milvus and Qdrant with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0060468,65,0.681,6.4 years experience as Computer Vision Engineer at BYJU'S with RAG. Concern: below-average behavioral signals. Note: Long notice period (120 days) might require buyout.
+CAND_0037680,66,0.68,"6.4 years as Data Engineer at PharmEasy, with hands-on expertise in Python and Weaviate. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0056936,67,0.679,"Strong behavioral profile: response rate 37%, GitHub activity score 68.30. Currently Senior Data Engineer at CRED with 7.8 years total experience in Python and Sql."
+CAND_0001734,68,0.678,Data Analyst at Tech Mahindra based in Dubai. 7.9 years of experience with Weaviate. available in 60 days.
+CAND_0080290,69,0.678,Demonstrated depth in Pinecone across 5.5 years. Currently Software Engineer at CRED. Behavioral engagement is moderate. Note: Long notice period (120 days) might require buyout.
+CAND_0011434,70,0.677,"Mid-level profile with 7.7 years, currently Data Analyst at Flipkart. Skilled in Elasticsearch and Weaviate with strong career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0093587,71,0.676,8.0 years experience as Senior Software Engineer at Flipkart with Python and Milvus. Engagement metrics are acceptable.
+CAND_0008049,72,0.674,"6.3 years as ML Engineer at Niramai, with hands-on expertise in RAG. Career trajectory shows moderate upward growth."
+CAND_0077536,73,0.674,"Strong behavioral profile: response rate 67%, GitHub activity score 44.00. Currently Data Analyst at BYJU'S with 7.2 years total experience in Pinecone. Note: Long notice period (90 days) might require buyout."
+CAND_0006538,74,0.673,"AI Specialist at Dream11 based in Kolkata, West Bengal. 5.7 years of experience with Elasticsearch. available in 60 days."
+CAND_0027924,75,0.673,Demonstrated depth in Python and Weaviate across 7.4 years. Currently Backend Engineer at Swiggy. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0032133,76,0.673,"Mid-level profile with 7.8 years, currently Senior Software Engineer at InMobi. Skilled in Elasticsearch and Pytorch with strong career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0031515,77,0.672,8.4 years experience as Software Engineer at Flipkart with Qdrant. Engagement metrics are acceptable.
+CAND_0053422,78,0.672,"6.8 years as Data Scientist at Aganitha, with hands-on expertise in Qdrant and RAG. Career trajectory shows moderate upward growth."
+CAND_0026426,79,0.671,"Strong behavioral profile: response rate 53%, GitHub activity score not available. Currently Analytics Engineer at Nykaa with 7.9 years total experience in Qdrant."
+CAND_0036724,80,0.671,"Software Engineer at BYJU'S based in Chennai, Tamil Nadu. 7.1 years of experience with Tensorflow and Microservices. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0043693,81,0.67,Demonstrated depth in Weaviate across 6.7 years. Currently Data Engineer at PolicyBazaar. Behavioral engagement is high. Note: Long notice period (120 days) might require buyout.
+CAND_0058463,82,0.67,"Mid-level profile with 7.5 years, currently Senior Software Engineer at Zoho. Skilled in Pytorch and Pinecone with strong career growth signals."
+CAND_0059297,83,0.668,8.0 years experience as Software Engineer at Accenture with Python and Sql. Concern: below-average behavioral signals.
+CAND_0069638,84,0.668,"6.2 years as Computer Vision Engineer at Swiggy, with hands-on expertise in Pytorch and Pinecone. Career trajectory shows moderate upward growth."
+CAND_0000981,85,0.667,"Strong behavioral profile: response rate 55%, GitHub activity score 70.30. Currently ML Engineer at Wysa with 6.4 years total experience in Sql and Pinecone. Note: Long notice period (120 days) might require buyout."
+CAND_0015533,86,0.665,Data Engineer at Meesho based in Sydney. 7.0 years of experience with Python and Elasticsearch. available in 120 days. Note: Long notice period (120 days) might require buyout.
+CAND_0043957,87,0.665,Demonstrated depth in Elasticsearch and Langchain across 6.5 years. Currently Data Analyst at Meesho. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0046629,88,0.665,"Mid-level profile with 6.1 years, currently Backend Engineer at Zomato. Skilled in Elasticsearch and Spark with strong career growth signals."
+CAND_0002612,89,0.663,6.9 years experience as Software Engineer at Dream11 with Mlops and Data pipelines. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
+CAND_0051165,90,0.663,"6.2 years as Analytics Engineer at Zomato, with hands-on expertise in Python. Career trajectory shows strong upward growth."
+CAND_0079652,91,0.662,"Strong behavioral profile: response rate 34%, GitHub activity score 12.10. Currently Java Developer at CRED with 7.3 years total experience in Qdrant and RAG."
+CAND_0034618,92,0.66,"Software Engineer at Accenture based in Noida, Uttar Pradesh. 8.0 years of experience with Scrum and Opencv. available in 90 days. Note: Long notice period (90 days) might require buyout."
+CAND_0063138,93,0.66,Demonstrated depth in Pytorch and Spark across 7.2 years. Currently Analytics Engineer at Zoho. Behavioral engagement is moderate.
+CAND_0096759,94,0.66,"Mid-level profile with 7.4 years, currently Data Analyst at Accenture. Skilled in Scrum and Sentence transformers with developing career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0017627,95,0.659,9.2 years experience as Software Engineer at Zomato with RAG. Engagement metrics are acceptable.
+CAND_0078333,96,0.659,"7.9 years as Analytics Engineer at Zoho, with hands-on expertise in Qdrant. Career trajectory shows strong upward growth."
+CAND_0093121,97,0.659,"Strong behavioral profile: response rate 74%, GitHub activity score not available. Currently Senior Data Engineer at upGrad with 6.0 years total experience in Pinecone."
+CAND_0098438,98,0.659,"Data Engineer at Freshworks based in Pune, Maharashtra. 6.4 years of experience with Elasticsearch and RAG. available in 60 days."
+CAND_0081958,99,0.657,Demonstrated depth in Elasticsearch and Qdrant across 5.2 years. Currently Backend Engineer at Dream11. Behavioral engagement is high.
+CAND_0018925,100,0.656,"Mid-level profile with 5.8 years, currently AI Research Engineer at Rephrase.ai. Skilled in Elasticsearch with developing career growth signals. Note: Long notice period (90 days) might require buyout."

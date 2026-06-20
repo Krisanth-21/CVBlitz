@@ -172,3 +172,29 @@ We have built a production-ready Python command-line utility in the workspace ro
 - **Fast Execution**: Processes all **100,000 candidates** and flags **20,884 honeypot profiles** in **12.62 seconds** (well within the 5-minute CPU constraint).
 - **Format Compliance**: Output file `submission.csv` successfully verified and passed using the organizer's `validate_submission.py` validation tool.
 - **Metadata Configuration**: Added `submission_metadata.yaml` to the repository root detailing team methodology, and updated workspace `README.md` with execution instructions.
+
+---
+
+## 🎨 Brand Design Re-skin (Cohere Stark Editorial Theme)
+
+Following the brand design parameters from `DESIGN-cohere.md`, the visual layers of the CVBlitz web application have been completely re-skinned:
+
+### 1. Unified Color Tokens Mapping
+- **Canvas White** (`#ffffff`): The dominant light mode background fill for clean, editorial focus.
+- **Near-Black Primary** (`#17171c`): Applied to primary buttons, interactive controls, and headers.
+- **Deep Enterprise Green** (`#003c33`): Configured as the core brand color representing AI search engines.
+- **Action Blue** (`#1863dc`): Used for visual anchors, highlights, and secondary links.
+- **Coral & Soft Coral** (`#ff7759` / `#ffad9b`): Mapped as high-fidelity accents on category outlines and dark mode markers.
+
+### 2. Typography & Headline Rhythm
+- **Display Headings**: Configured with Space Grotesk and Inter display family.
+- **Editorial Spacing**: Formatted display headings with tighter line heights (`1.05` height) and negative tracking (`-0.04em` letter-spacing) for a sharp research-lab cadence.
+- **Body Copy**: Swapped standard sans voices for Unica77-inspired restrains (**Inter** fallback to **Arial**).
+
+### 3. Component Geometry & Border Radii
+- Redefined standard borders to match the Cohere geometric proportions:
+  - `xs` (4px): Search input fields and thumbnails.
+  - `sm` (8px): Filter chips and cards.
+  - `lg` (22px): Signature media card curves.
+  - `pill` (32px): Round CTA buttons.
+

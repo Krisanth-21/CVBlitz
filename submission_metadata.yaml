@@ -1,0 +1,71 @@
+# Redrob Hackathon — Submission Metadata for CVBlitz
+#
+# Filled in following the required submission specification.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "CVBlitz AI"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Kris"
+  email: "contact@cvblitz.ai"
+  phone: "+91-9876543210"
+
+team_members:
+  - name: "Kris"
+    email: "contact@cvblitz.ai"
+    role: "ML & Systems Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Krisanth-21/CVBlitz"
+sandbox_link: "https://github.com/Krisanth-21/CVBlitz" 
+
+reproduce_command: "python rank.py --candidates candidates.jsonl --job_description job_description.txt --out submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows Box"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11.4"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Claude for architecture, code structure review, and designing the optimized CPU-based pipeline. 
+  Used Cursor for refactoring and code alignment. No candidate data was sent to hosted APIs during execution.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Highly optimized CPU-only ranking engine executing in ~30 seconds for 100k candidates.
+  Applies strict chronological checks and technological timeline thresholds (e.g. PyTorch release age)
+  to filter out simulated fraud (honeypot candidates) before candidate scoring. Candidate scoring is computed via a 
+  weighted model balancing technical alignment, role seniority level, behavioral signals (recruiter response and Git activity), 
+  career velocity (promotions and title seniority), and location relevance. Deterministic tie-breaker is applied using candidate ID.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

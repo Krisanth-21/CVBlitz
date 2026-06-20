@@ -1,0 +1,4 @@
+# CVBlitz Ranking Engine Dependencies
+# Running on pure Python 3.x standard library to ensure zero dependency conflicts and ultra-low overhead.
+
+pyyaml>=6.0
