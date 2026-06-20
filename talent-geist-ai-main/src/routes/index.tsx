@@ -37,6 +37,7 @@ function Landing() {
       <RankingEngine />
       <Comparison />
       <Metrics />
+      <Integrations />
       <Testimonials />
       <FinalCTA />
       <Footer />
@@ -683,6 +684,64 @@ function Metrics() {
   );
 }
 
+/* ────────────────────────  INTEGRATIONS  ──────────────────────── */
+function Integrations() {
+  const integrations = [
+    {
+      name: "CSV & Data Exports",
+      type: "Data Portability",
+      desc: "Export compliance-ready rankings, match scores, and recruiter verdicts matching challenge formats directly.",
+      icon: Database,
+    },
+    {
+      name: "ATS Webhooks Sync",
+      type: "Pipeline Sync",
+      desc: "Connect Greenhouse, Lever, Workday, or custom webhooks to update candidate pipelines automatically.",
+      icon: Workflow,
+    },
+    {
+      name: "Redrob Platform Link",
+      type: "First-Party Sync",
+      desc: "Automatically sync connection counts, application history, and sign-up metrics from Redrob.",
+      icon: Users,
+    },
+    {
+      name: "GitHub Activity Sync",
+      type: "Behavioral Signal",
+      desc: "Fetch public repository contributions, active commit frequencies, and language distributions in real-time.",
+      icon: Github,
+    },
+  ];
+
+  return (
+    <section id="integrations" className="px-6 py-32 bg-muted/10 border-t border-border/40">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader
+          eyebrow="Compatibility"
+          title="Fits Directly Into Your Sourcing Workflow"
+          sub="Integrate CVBlitz seamlessly with your existing platforms, developer databases, and applicant tracking software."
+        />
+
+        <div className="mt-14 grid gap-6 md:grid-cols-4">
+          {integrations.map((item) => (
+            <div
+              key={item.name}
+              className="group relative rounded-2xl border border-border/60 bg-card/45 p-6 hover:border-brand/40 hover:bg-card/65 transition-all duration-300"
+            >
+              <div className="mb-5 grid size-10 place-items-center rounded-xl bg-background border border-border/60 text-brand group-hover:scale-105 transition-transform">
+                <item.icon className="size-5" />
+              </div>
+              <div className="text-[10px] font-mono font-bold text-brand uppercase tracking-wider">{item.type}</div>
+              <h4 className="mt-2 font-display text-lg font-semibold">{item.name}</h4>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ────────────────────────  TESTIMONIALS  ──────────────────────── */
 function Testimonials() {
   const t = [
@@ -809,10 +868,7 @@ function Footer() {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <div>© {new Date().getFullYear()} CVBlitz. Built for the Redrob Hackathon.</div>
-          <div className="flex items-center gap-2 font-mono">
-            <TrendingUp className="size-3.5 text-brand" /> ranking_engine · v1.0
-          </div>
+          <div>© {new Date().getFullYear()} CVBlitz.</div>
         </div>
       </div>
     </footer>

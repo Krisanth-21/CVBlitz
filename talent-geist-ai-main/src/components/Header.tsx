@@ -65,9 +65,9 @@ export function Header({ showBack = false, backTo = "/analyze" }: HeaderProps) {
 
   const navLinks = [
     { to: "/analyze", label: "Workspace", icon: Terminal, count: null },
-    { to: "/results", label: "Rankings", icon: Award, count: "100" },
+    { to: "/results", label: "Rankings", icon: Award, count: null },
     { to: "/compare", label: "Compare", icon: Scale, count: null },
-    { to: "/ats-blindspots", label: "Blindspots", icon: Sparkles, count: "New" },
+    { to: "/ats-blindspots", label: "ATS Blindspots", icon: Sparkles, count: "New" },
     { to: "/fit-intelligence", label: "Fit Intelligence", icon: Brain, count: null },
     { to: "/methodology", label: "Methodology", icon: Cpu, count: null },
   ];
@@ -249,8 +249,10 @@ export function Header({ showBack = false, backTo = "/analyze" }: HeaderProps) {
                   <Icon className="size-3.5" />
                   <span>{link.label}</span>
                   {link.count && (
-                    <span className={`px-1.5 py-0.5 text-[8px] font-mono font-bold rounded-full ${
-                      link.count === "New" ? "bg-brand/10 text-brand" : "bg-muted-foreground/10 text-muted-foreground"
+                    <span className={`ml-1.5 px-2 py-0.5 text-[8px] font-sans font-bold tracking-wider rounded-full border ${
+                      link.count === "New"
+                        ? "bg-brand/10 text-brand border-brand/20 uppercase"
+                        : "bg-muted-foreground/10 text-muted-foreground border-transparent"
                     }`}>
                       {link.count}
                     </span>
@@ -434,7 +436,11 @@ export function Header({ showBack = false, backTo = "/analyze" }: HeaderProps) {
                         <span>{link.label}</span>
                       </div>
                       {link.count && (
-                        <span className="px-2 py-0.5 text-[9px] font-mono font-bold bg-muted-foreground/10 text-muted-foreground rounded-full">
+                        <span className={`px-2 py-0.5 text-[9px] font-sans font-bold rounded-full border ${
+                          link.count === "New"
+                            ? "bg-brand/10 text-brand border-brand/20 uppercase"
+                            : "bg-muted-foreground/10 text-muted-foreground border-transparent"
+                        }`}>
                           {link.count}
                         </span>
                       )}
