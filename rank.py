@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-CVBlitz Best Ranker — rank_best.py
-Produces top 100 candidates scoring 0.925–0.954 range.
-
-Usage:
-  python rank_best.py --candidates candidates.jsonl --out submission.csv
-  python rank_best.py --candidates candidates.jsonl.gz --out submission.csv
-"""
-
 import json, csv, re, math, argparse, gzip, sys, logging
 from datetime import datetime
 from typing import Dict, List, Any, Tuple, Set, Optional
@@ -15,9 +5,6 @@ from typing import Dict, List, Any, Tuple, Set, Optional
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("CVBlitzBestRanker")
 
-# ============================================================
-# JD TARGETS (Redrob Hackathon — Senior AI Engineer)
-# ============================================================
 REQUIRED_SKILLS = {
     "python", "embeddings", "vector database", "vector search",
     "retrieval", "ranking", "elasticsearch", "lucene", "faiss",
@@ -37,9 +24,6 @@ PREFERRED_SKILLS = {
 TARGET_EXP_MIN = 5
 TARGET_EXP_MAX = 9
 
-# ============================================================
-# SKILL EXPANSION: synonyms + hyponyms + abbreviations
-# ============================================================
 SKILL_EXPANSION = {
     "vector database":   ["milvus","pinecone","weaviate","qdrant","faiss","pgvector","chroma","opensearch","vespa"],
     "vector search":     ["milvus","pinecone","weaviate","qdrant","faiss","pgvector","opensearch"],
@@ -93,9 +77,6 @@ REVERSE_EXPANSION = {
     "information retrieval": ["retrieval","search","ranking"],
 }
 
-# ============================================================
-# HONEYPOT DETECTION CONSTANTS
-# ============================================================
 FICTIONAL_COMPANIES = {
     "stark industries","hooli","dunder mifflin","globex",
     "wayne enterprises","pied piper","acme corp","initech",
@@ -141,19 +122,14 @@ IRRELEVANT_SKILLS_DISPLAY = {
     "tts","asr","forecasting","kubernetes","microservices"
 }
 
-# ============================================================
-# UTILITIES
-# ============================================================
 def clean(s):
     if not s: return ""
     return s.lower().replace("-"," ").replace("_"," ").strip()
 
 def stem_text(word):
-    """Cleans and stems a single term using a simple, fast suffix stripper."""
     w = clean(word)
     if len(w) <= 3:
         return w
-    # Common suffix stripping
     if w.endswith("ies"):
         w = w[:-3] + "i"
     elif w.endswith("ing"):
@@ -174,15 +150,10 @@ def stem_text(word):
 
 class ConceptKnowledgeGraph:
     def __init__(self):
-        # Base relations
-        # Map: child -> list of (parent, rel_type)
         self.relations = {}
-        # Synonyms map
         self.synonyms = {}
         
-        # Load relations
         relations_list = [
-            # Hyponymy (is_a)
             ("milvus", "is_a", "vector database"),
             ("pinecone", "is_a", "vector database"),
             ("weaviate", "is_a", "vector database"),
@@ -195,7 +166,6 @@ class ConceptKnowledgeGraph:
             ("solr", "is_a", "search engine"),
             ("lucene", "is_a", "search engine"),
             
-            # Meronymy (part_of)
             ("embeddings", "part_of", "vector search"),
             ("vector database", "part_of", "vector search"),
             ("vector search", "part_of", "rag"),
@@ -227,19 +197,13 @@ class ConceptKnowledgeGraph:
             self.synonyms[stem2] = stem1
 
     def expand_skills(self, skills_raw: List[Dict[str, Any]]) -> Dict[str, Tuple[float, Dict[str, Any]]]:
-        """
-        Expands skills list using Synonyms, Hypernymy, and Meronymy.
-        Returns a dict mapping: stem -> (confidence, source_skill_dict)
-        """
         expanded = {}
-        # First load explicit
         for s in skills_raw:
             if not s or not s.get("name"): continue
             stem = stem_text(s["name"])
             if stem not in expanded or (s.get("duration_months") or 0) > (expanded[stem][1].get("duration_months") or 0):
                 expanded[stem] = (1.0, s)
                 
-        # Pass 1: Resolve Synonyms and direct Hyponymy -> Hypernymy
         changed = True
         while changed:
             changed = False
@@ -247,14 +211,12 @@ class ConceptKnowledgeGraph:
             for stem in current_stems:
                 conf, source = expanded[stem]
                 
-                # 1. Synonyms
                 if stem in self.synonyms:
                     syn = self.synonyms[stem]
                     if syn not in expanded or expanded[syn][0] < conf:
                         expanded[syn] = (conf, source)
                         changed = True
                         
-                # 2. Hypernymy (is_a -> e.g. milvus -> vector database)
                 if stem in self.relations:
                     for parent, rel_type in self.relations[stem]:
                         if rel_type == "is_a":
@@ -262,7 +224,6 @@ class ConceptKnowledgeGraph:
                                 expanded[parent] = (conf, source)
                                 changed = True
                                 
-        # Pass 2: Resolve Meronymy -> Holonymy
         holonym_parts = {}
         for child, rel_type, parent in [
             ("embeddings", "part_of", "vector search"),
@@ -292,7 +253,6 @@ class ConceptKnowledgeGraph:
                 if holonym not in expanded or expanded[holonym][0] < score:
                     expanded[holonym] = (score, best_source)
                     
-        # Hardcoded shortcuts for popular frameworks
         for framework in ["llamaindex", "langchain"]:
             f_stem = stem_text(framework)
             if f_stem in expanded:
@@ -302,7 +262,6 @@ class ConceptKnowledgeGraph:
                     
         return expanded
 
-# Global Concept Knowledge Graph instance
 kg = ConceptKnowledgeGraph()
 
 def expand_skill(skill_name):
@@ -312,9 +271,6 @@ def expand_skill(skill_name):
     variants.update(REVERSE_EXPANSION.get(c, []))
     return variants
 
-# ============================================================
-# HONEYPOT DETECTION
-# ============================================================
 def detect_honeypot(candidate):
     profile = candidate.get("profile") or {}
     company = clean(profile.get("current_company",""))
@@ -328,7 +284,6 @@ def detect_honeypot(candidate):
     if any(t in title for t in IRRELEVANT_TITLES):
         return True, "irrelevant_title"
 
-    # Timeline overlaps (>2 months simultaneous full-time jobs)
     periods = []
     for job in history:
         if not job: continue
@@ -347,7 +302,6 @@ def detect_honeypot(candidate):
             if overlap > 2:
                 return True, "timeline_overlap"
 
-    # Anachronism — skill duration exceeds tool existence
     skills_dict = {clean(s.get("name","")): s for s in skills if s and s.get("name")}
     for sn, sd in skills_dict.items():
         dur = sd.get("duration_months") or 0
@@ -355,7 +309,6 @@ def detect_honeypot(candidate):
             if tool in sn and dur > maxm:
                 return True, f"anachronism_duration:{sn}"
 
-    # Anachronism — job description mentions tool before release
     for job in history:
         if not job: continue
         desc = clean(job.get("description",""))
@@ -368,7 +321,6 @@ def detect_honeypot(candidate):
                     return True, f"anachronism_job:{tool}"
         except: continue
 
-    # Skill inflation
     expert_skills = [s for s in skills if s and s.get("proficiency","").lower()=="expert"]
     if len(expert_skills) > 6 and exp < 5:
         return True, "skill_inflation_expert"
@@ -378,9 +330,6 @@ def detect_honeypot(candidate):
 
     return False, ""
 
-# ============================================================
-# SCORING ENGINE
-# ============================================================
 def score_candidate(candidate):
     profile = candidate.get("profile") or {}
     skills_raw = candidate.get("skills") or []
@@ -392,10 +341,8 @@ def score_candidate(candidate):
     location = clean(profile.get("location",""))
     exp = float(profile.get("years_of_experience") or 0)
 
-    # Build expanded skills dictionary using Concept Knowledge Graph
     expanded_skills = kg.expand_skills(skills_raw)
 
-    # ── 1. TECH SCORE (40%) ──────────────────────────────
     tech_score = 0.0
     matched_required = []
     matched_preferred = []
@@ -419,7 +366,6 @@ def score_candidate(candidate):
             tech_score += 12.0 * pm * conf
             matched_preferred.append(pref)
 
-    # Penalty check using stemmed keys
     core_search = {
         stem_text("elasticsearch"), stem_text("milvus"), stem_text("pinecone"),
         stem_text("weaviate"), stem_text("qdrant"), stem_text("faiss"),
@@ -433,7 +379,6 @@ def score_candidate(candidate):
 
     tech_score = min(max(tech_score, 5.0), 100.0)
 
-    # ── 2. ROLE SCORE (25%) ──────────────────────────────
     role_score = 50.0
 
     if TARGET_EXP_MIN <= exp <= TARGET_EXP_MAX:
@@ -463,7 +408,6 @@ def score_candidate(candidate):
     elif any(kw in title for kw in BAD_TITLES):
         role_score *= 0.3
 
-    # Services firm penalty
     is_services_only = True
     for job in history:
         if not job: continue
@@ -480,7 +424,6 @@ def score_candidate(candidate):
     elif curr_services:
         role_score *= 0.75
 
-    # Location boost
     if any(c in location for c in ["bangalore","bengaluru","noida","pune"]):
         role_score += 12.0
     elif any(c in location for c in ["delhi","ncr","mumbai","hyderabad","chennai","gurgaon"]):
@@ -488,7 +431,6 @@ def score_candidate(candidate):
 
     role_score = min(max(role_score, 5.0), 100.0)
 
-    # ── 3. BEHAVIORAL SCORE (15%) ─────────────────────────
     resp = float(signals.get("recruiter_response_rate") or 75)
     if resp <= 1.0: resp *= 100.0
 
@@ -541,7 +483,6 @@ def score_candidate(candidate):
     if relocate:     behavioral_score += 3.0
     behavioral_score = min(max(behavioral_score, 5.0), 100.0)
 
-    # ── 4. GROWTH SCORE (10%) ────────────────────────────
     growth_score = 65.0
     num_jobs = len(history)
     if num_jobs > 0:
@@ -565,7 +506,6 @@ def score_candidate(candidate):
     growth_score += min(promotions*15.0, 30.0)
     growth_score = min(max(growth_score, 5.0), 100.0)
 
-    # ── 5. AUTHENTICITY SCORE (10%) ──────────────────────
     auth_score = 100.0
     if num_jobs > 0:
         total_months = sum((j or {}).get("duration_months",0) for j in history if j)
@@ -576,7 +516,6 @@ def score_candidate(candidate):
         auth_score += 5.0
     auth_score = min(max(auth_score, 50.0), 100.0)
 
-    # ── FINAL WEIGHTED SCORE ──────────────────────────────
     final = (
         0.40*tech_score +
         0.25*role_score +
@@ -603,9 +542,6 @@ def score_candidate(candidate):
         "response_rate": resp,
     }
 
-# ============================================================
-# REASONING GENERATOR — 6 rotating templates
-# ============================================================
 def generate_reasoning(cid, breakdown):
     title = breakdown["title"]
     company = breakdown["company"]
@@ -652,9 +588,6 @@ def generate_reasoning(cid, breakdown):
 
     return templates[hash(cid) % len(templates)]
 
-# ============================================================
-# MAIN PIPELINE
-# ============================================================
 def main():
     parser = argparse.ArgumentParser(description="CVBlitz Best Ranker")
     parser.add_argument("--candidates", required=True, help="Path to candidates.jsonl or candidates.jsonl.gz")
@@ -701,25 +634,21 @@ def main():
 
     logger.info(f"Done. Total={total} Honeypots={honeypots} Clean={len(scored)} Skipped={skipped}")
 
-    # Sort: descending score, ascending candidate_id for ties
     scored.sort(key=lambda x: (-x["score"], x["candidate_id"]))
 
     top100 = scored[:100]
 
-    # Validate monotonic
     scores = [r["score"] for r in top100]
     if not all(scores[i] >= scores[i+1] for i in range(len(scores)-1)):
         logger.error("Sorting error — scores not monotonically decreasing!")
         sys.exit(1)
 
-    # Sanity check
     print("\n=== TOP 10 SANITY CHECK ===")
     for i, row in enumerate(top100[:10]):
         b = row["breakdown"]
         print(f"Rank {i+1:>2}: {row['candidate_id']} | {b['title']} at {b['company']} | Score:{row['score']:.4f} | Tech:{b['tech']:.1f} Role:{b['role']:.1f} Beh:{b['behavioral']:.1f}")
     print("===========================\n")
 
-    # Write CSV
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["candidate_id","rank","score","reasoning"])
@@ -735,4 +664,4 @@ def main():
     logger.info(f"Score range: {top100[0]['score']:.4f} (rank 1) → {top100[-1]['score']:.4f} (rank 100)")
 
 if __name__ == "__main__":
-    main()
+    main()
