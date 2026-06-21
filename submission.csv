@@ -1,101 +1,101 @@
 candidate_id,rank,score,reasoning
-CAND_0085857,1,0.93,Senior Software Engineer at Swiggy with 8.0 years exp. Strong technical profile in product.
-CAND_0085706,2,0.912,Senior Software Engineer at Flipkart with 7.7 years exp. Strong technical profile in tech services.
-CAND_0082847,3,0.906,Senior Software Engineer at Meesho with 7.6 years exp. Strong technical profile in tech services.
-CAND_0003680,4,0.9,Senior Software Engineer at Zomato with 8.0 years exp. Strong technical profile in product.
-CAND_0005113,5,0.9,Senior Software Engineer at PhonePe with 7.5 years exp. Strong technical profile in tech services.
-CAND_0010668,6,0.9,Frontend Engineer at Razorpay with 10.0 years exp. Strong technical profile in product.
-CAND_0053765,7,0.9,QA Engineer at Flipkart with 10.0 years exp. Strong technical profile in tech services.
-CAND_0061427,8,0.9,QA Engineer at Swiggy with 10.0 years exp. Strong technical profile in product.
-CAND_0070339,9,0.9,Software Engineer at CRED with 10.0 years exp. Strong technical profile in tech services.
-CAND_0082901,10,0.9,Frontend Engineer at Swiggy with 10.0 years exp. Strong technical profile in product.
-CAND_0093587,11,0.9,Senior Software Engineer at Flipkart with 8.0 years exp. Strong technical profile in tech services.
-CAND_0006958,12,0.894,Software Engineer at Razorpay with 9.9 years exp. Strong technical profile in product.
-CAND_0008151,13,0.894,Frontend Engineer at Swiggy with 9.9 years exp. Strong technical profile in product.
-CAND_0024004,14,0.894,Senior Software Engineer at CRED with 7.9 years exp. Strong technical profile in tech services.
-CAND_0025177,15,0.894,Software Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0028888,16,0.894,Senior Software Engineer at PhonePe with 7.4 years exp. Strong technical profile in tech services.
-CAND_0038571,17,0.894,Frontend Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0041726,18,0.894,Software Engineer at Swiggy with 9.9 years exp. Strong technical profile in product.
-CAND_0059024,19,0.894,Senior Software Engineer at Meesho with 7.4 years exp. Strong technical profile in tech services.
-CAND_0086638,20,0.894,Frontend Engineer at CRED with 9.9 years exp. Strong technical profile in tech services.
-CAND_0087716,21,0.894,Software Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0010598,22,0.888,Frontend Engineer at Razorpay with 9.8 years exp. Strong technical profile in product.
-CAND_0014894,23,0.888,Senior Software Engineer at BYJU'S with 7.3 years exp. Strong technical profile in tech services.
-CAND_0045567,24,0.888,Full Stack Developer at Zomato with 9.8 years exp. Strong technical profile in product.
-CAND_0074180,25,0.888,Software Engineer at Razorpay with 9.8 years exp. Strong technical profile in product.
-CAND_0078245,26,0.888,Frontend Engineer at Zomato with 9.8 years exp. Strong technical profile in product.
-CAND_0091359,27,0.888,Software Engineer at Swiggy with 9.8 years exp. Strong technical profile in product.
-CAND_0000920,28,0.882,QA Engineer at Flipkart with 9.7 years exp. Strong technical profile in tech services.
-CAND_0040209,29,0.882,Senior Software Engineer at PhonePe with 7.7 years exp. Strong technical profile in tech services.
-CAND_0056372,30,0.882,Senior Software Engineer at Dream11 with 7.7 years exp. Strong technical profile in tech services.
-CAND_0042664,31,0.876,Frontend Engineer at Zomato with 9.6 years exp. Strong technical profile in product.
-CAND_0079478,32,0.876,Software Engineer at Swiggy with 9.6 years exp. Strong technical profile in product.
-CAND_0096725,33,0.876,Senior Software Engineer at PhonePe with 7.6 years exp. Strong technical profile in tech services.
-CAND_0008784,34,0.87,Full Stack Developer at Swiggy with 10.0 years exp. Strong technical profile in product.
-CAND_0010532,35,0.87,Full Stack Developer at Zomato with 10.0 years exp. Strong technical profile in product.
-CAND_0011832,36,0.87,Software Engineer at Swiggy with 10.0 years exp. Strong technical profile in product.
-CAND_0019498,37,0.87,Full Stack Developer at Razorpay with 9.5 years exp. Strong technical profile in product.
-CAND_0025868,38,0.87,Software Engineer at CRED with 10.0 years exp. Strong technical profile in tech services.
-CAND_0028022,39,0.87,Software Engineer at Razorpay with 10.0 years exp. Strong technical profile in product.
-CAND_0041725,40,0.87,Software Engineer at Swiggy with 10.0 years exp. Strong technical profile in product.
-CAND_0072307,41,0.87,Frontend Engineer at CRED with 10.0 years exp. Strong technical profile in tech services.
-CAND_0075827,42,0.87,Full Stack Developer at Swiggy with 9.5 years exp. Strong technical profile in product.
-CAND_0087471,43,0.87,Senior Software Engineer at Paytm with 7.0 years exp. Strong technical profile in tech services.
-CAND_0088497,44,0.87,Full Stack Developer at Razorpay with 9.5 years exp. Strong technical profile in product.
-CAND_0092323,45,0.87,Frontend Engineer at CRED with 10.0 years exp. Strong technical profile in tech services.
-CAND_0002512,46,0.864,Software Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0003448,47,0.864,Full Stack Developer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0007731,48,0.864,Full Stack Developer at Flipkart with 9.9 years exp. Strong technical profile in tech services.
-CAND_0007998,49,0.864,Frontend Engineer at Swiggy with 9.9 years exp. Strong technical profile in product.
-CAND_0008348,50,0.864,Frontend Engineer at Razorpay with 9.9 years exp. Strong technical profile in product.
-CAND_0009844,51,0.864,Senior Software Engineer at Nykaa with 6.9 years exp. Strong technical profile in tech services.
-CAND_0011061,52,0.864,Frontend Engineer at Flipkart with 9.9 years exp. Strong technical profile in tech services.
-CAND_0015754,53,0.864,Senior Software Engineer at Dream11 with 7.4 years exp. Strong technical profile in tech services.
-CAND_0016691,54,0.864,Senior Software Engineer at Dream11 with 7.4 years exp. Strong technical profile in tech services.
-CAND_0022169,55,0.864,Frontend Engineer at Swiggy with 9.9 years exp. Strong technical profile in product.
-CAND_0030349,56,0.864,Frontend Engineer at Flipkart with 9.9 years exp. Strong technical profile in tech services.
-CAND_0033659,57,0.864,QA Engineer at Zomato with 9.4 years exp. Strong technical profile in product.
-CAND_0037916,58,0.864,Full Stack Developer at Flipkart with 9.4 years exp. Strong technical profile in tech services.
-CAND_0039975,59,0.864,Full Stack Developer at Razorpay with 9.9 years exp. Strong technical profile in product.
-CAND_0048436,60,0.864,QA Engineer at Razorpay with 9.4 years exp. Strong technical profile in product.
-CAND_0058706,61,0.864,Software Engineer at CRED with 9.9 years exp. Strong technical profile in tech services.
-CAND_0058795,62,0.864,Full Stack Developer at CRED with 9.9 years exp. Strong technical profile in tech services.
-CAND_0058823,63,0.864,Software Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0060539,64,0.864,QA Engineer at Zomato with 9.4 years exp. Strong technical profile in product.
-CAND_0074471,65,0.864,Frontend Engineer at CRED with 9.4 years exp. Strong technical profile in tech services.
-CAND_0074636,66,0.864,Software Engineer at Zomato with 9.9 years exp. Strong technical profile in product.
-CAND_0075045,67,0.864,Frontend Engineer at Flipkart with 9.9 years exp. Strong technical profile in tech services.
-CAND_0075875,68,0.864,Frontend Engineer at Razorpay with 9.9 years exp. Strong technical profile in product.
-CAND_0077270,69,0.864,Frontend Engineer at Flipkart with 9.9 years exp. Strong technical profile in tech services.
-CAND_0090313,70,0.864,QA Engineer at CRED with 9.9 years exp. Strong technical profile in tech services.
-CAND_0091211,71,0.864,Frontend Engineer at CRED with 9.9 years exp. Strong technical profile in tech services.
-CAND_0092844,72,0.864,Software Engineer at Zomato with 9.4 years exp. Strong technical profile in product.
-CAND_0000110,73,0.858,Software Engineer at Swiggy with 9.8 years exp. Strong technical profile in product.
-CAND_0006949,74,0.858,Software Engineer at CRED with 9.8 years exp. Strong technical profile in tech services.
-CAND_0011499,75,0.858,Full Stack Developer at Flipkart with 9.3 years exp. Strong technical profile in tech services.
-CAND_0032184,76,0.858,Full Stack Developer at Razorpay with 9.8 years exp. Strong technical profile in product.
-CAND_0034741,77,0.858,Frontend Engineer at CRED with 9.3 years exp. Strong technical profile in tech services.
-CAND_0051617,78,0.858,Full Stack Developer at Razorpay with 9.8 years exp. Strong technical profile in product.
-CAND_0052355,79,0.858,Software Engineer at Flipkart with 9.8 years exp. Strong technical profile in tech services.
-CAND_0057305,80,0.858,QA Engineer at Swiggy with 9.8 years exp. Strong technical profile in product.
-CAND_0057927,81,0.858,Senior Software Engineer at Swiggy with 7.3 years exp. Strong technical profile in product.
-CAND_0063503,82,0.858,QA Engineer at Flipkart with 9.8 years exp. Strong technical profile in tech services.
-CAND_0065494,83,0.858,Frontend Engineer at Zomato with 9.8 years exp. Strong technical profile in product.
-CAND_0072006,84,0.858,QA Engineer at Swiggy with 9.3 years exp. Strong technical profile in product.
-CAND_0073210,85,0.858,Frontend Engineer at Razorpay with 9.8 years exp. Strong technical profile in product.
-CAND_0076536,86,0.858,Software Engineer at Swiggy with 9.8 years exp. Strong technical profile in product.
-CAND_0005154,87,0.852,QA Engineer at Razorpay with 9.7 years exp. Strong technical profile in product.
-CAND_0006060,88,0.852,Senior Software Engineer at Razorpay with 7.2 years exp. Strong technical profile in product.
-CAND_0006342,89,0.852,Full Stack Developer at Razorpay with 9.7 years exp. Strong technical profile in product.
-CAND_0009357,90,0.852,Software Engineer at CRED with 9.2 years exp. Strong technical profile in tech services.
-CAND_0013256,91,0.852,Senior Software Engineer at Paytm with 7.2 years exp. Strong technical profile in tech services.
-CAND_0014624,92,0.852,Full Stack Developer at Swiggy with 9.2 years exp. Strong technical profile in product.
-CAND_0019829,93,0.852,Frontend Engineer at Flipkart with 9.7 years exp. Strong technical profile in tech services.
-CAND_0022616,94,0.852,QA Engineer at Zomato with 9.7 years exp. Strong technical profile in product.
-CAND_0036784,95,0.852,Software Engineer at Razorpay with 9.7 years exp. Strong technical profile in product.
-CAND_0038641,96,0.852,Software Engineer at Razorpay with 9.7 years exp. Strong technical profile in product.
-CAND_0039023,97,0.852,Software Engineer at Swiggy with 9.7 years exp. Strong technical profile in product.
-CAND_0039316,98,0.852,QA Engineer at Swiggy with 9.7 years exp. Strong technical profile in product.
-CAND_0049071,99,0.852,Software Engineer at Flipkart with 9.7 years exp. Strong technical profile in tech services.
-CAND_0065140,100,0.852,Full Stack Developer at CRED with 9.7 years exp. Strong technical profile in tech services.
+CAND_0032887,1,0.9537,"Mid-level profile with 6.1 years, currently ML Engineer at Niramai. Skilled in Embeddings and Sentence Transformers with strong career growth signals."
+CAND_0060392,2,0.9509,Demonstrated depth in Embeddings and Sentence Transformers across 5.2 years. Currently Backend Engineer at Meesho. Behavioral engagement is high.
+CAND_0017516,3,0.948,6.6 years experience as Senior Data Engineer at Zomato with Embeddings and Sentence Transformers. Engagement metrics are acceptable.
+CAND_0081480,4,0.948,Demonstrated depth in Ranking and Embeddings across 5.6 years. Currently Computer Vision Engineer at Sarvam AI. Behavioral engagement is high.
+CAND_0066479,5,0.946,Demonstrated depth in Ranking and Embeddings across 6.1 years. Currently Senior Software Engineer at Flipkart. Behavioral engagement is moderate.
+CAND_0049540,6,0.9447,Demonstrated depth in Embeddings and Sentence Transformers across 6.8 years. Currently ML Engineer at Saarthi.ai. Behavioral engagement is high.
+CAND_0098624,7,0.9445,"Senior Software Engineer (ML) at CRED based in Trivandrum, Kerala. 6.3 years of experience with Embeddings and Sentence Transformers. available in 60 days."
+CAND_0021488,8,0.9443,"6.5 years as Data Engineer at Nykaa, with hands-on expertise in Ranking and Search. Career trajectory shows strong upward growth."
+CAND_0093916,9,0.9442,7.7 years experience as Data Engineer at Meesho with Embeddings and Weaviate. Engagement metrics are acceptable.
+CAND_0094197,10,0.9442,"Strong behavioral profile: response rate 64%, GitHub activity score 65.0. Currently Software Engineer at InMobi with 6.6 years total experience in Embeddings and Vector Search."
+CAND_0035321,11,0.9437,7.2 years experience as Senior Data Engineer at Flipkart with Embeddings and Search. Engagement metrics are acceptable.
+CAND_0096104,12,0.9428,7.0 years experience as AI Specialist at Yellow.ai with Ranking and Embeddings. Concern: below-average behavioral signals.
+CAND_0048558,13,0.9426,"Data Scientist at Rephrase.ai based in Noida, Uttar Pradesh. 6.7 years of experience with Ranking and Embeddings. immediately available."
+CAND_0011489,14,0.9417,Demonstrated depth in Embeddings and Sentence Transformers across 5.8 years. Currently ML Engineer at Glance. Behavioral engagement is moderate.
+CAND_0064116,15,0.9414,"Strong behavioral profile: response rate 68%, GitHub activity score not available. Currently Senior Software Engineer at Flipkart with 6.1 years total experience in Learning To Rank and Embeddings."
+CAND_0064123,16,0.9411,5.4 years experience as Data Engineer at Meesho with Search and Vector Search. Engagement metrics are acceptable.
+CAND_0094165,17,0.9406,5.8 years experience as AI Research Engineer at PhonePe with Embeddings and Pinecone. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
+CAND_0097567,18,0.9401,"6.3 years as Software Engineer at PharmEasy, with hands-on expertise in Embeddings and Sentence Transformers. Career trajectory shows moderate upward growth."
+CAND_0067535,19,0.9399,"Junior ML Engineer at Locobuzz based in Jaipur, Rajasthan. 6.8 years of experience with Retrieval and Retrieval. available in 45 days."
+CAND_0091552,20,0.9398,"Strong behavioral profile: response rate 72%, GitHub activity score 27.2. Currently Software Engineer at Zomato with 7.8 years total experience in Retrieval and Retrieval."
+CAND_0025882,21,0.9396,"Strong behavioral profile: response rate 79%, GitHub activity score 34.7. Currently Senior Software Engineer (ML) at Freshworks with 5.6 years total experience in Embeddings and Weaviate."
+CAND_0061969,22,0.9396,"Mid-level profile with 6.7 years, currently Senior Data Engineer at Swiggy. Skilled in Embeddings and Search with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0068910,23,0.9395,"Strong behavioral profile: response rate 81%, GitHub activity score 36.9. Currently Senior Software Engineer at Ola with 5.7 years total experience in Embeddings and Milvus."
+CAND_0093341,24,0.9395,"Strong behavioral profile: response rate 83%, GitHub activity score not available. Currently Software Engineer at Swiggy with 5.5 years total experience in Search and Vector Search."
+CAND_0003572,25,0.9392,7.9 years experience as Software Engineer at Flipkart with Embeddings and Pinecone. Engagement metrics are acceptable.
+CAND_0084460,26,0.9387,"5.6 years as Senior Software Engineer (ML) at upGrad, with hands-on expertise in Embeddings and Pinecone. Career trajectory shows strong upward growth."
+CAND_0018013,27,0.9385,"Mid-level profile with 6.7 years, currently AI Specialist at Sarvam AI. Skilled in Learning To Rank and Weaviate with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0086154,28,0.9376,"Mid-level profile with 6.8 years, currently Data Scientist at Ola. Skilled in Embeddings and Search with developing career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0071941,29,0.9375,"Mid-level profile with 5.2 years, currently Software Engineer at Razorpay. Skilled in Ranking and Search with developing career growth signals."
+CAND_0025302,30,0.9373,"Senior Data Engineer at Vedantu based in Bangalore, Karnataka. 6.8 years of experience with Learning To Rank and Haystack. available in 90 days."
+CAND_0020017,31,0.9372,7.0 years experience as Senior Software Engineer at Unacademy with Embeddings and Sentence Transformers. Concern: below-average behavioral signals.
+CAND_0041913,32,0.9372,7.8 years experience as Software Engineer at Razorpay with Ranking and Search. Engagement metrics are acceptable.
+CAND_0080291,33,0.9367,"Junior ML Engineer at Ola based in Vizag, Andhra Pradesh. 6.5 years of experience with Weaviate and Pinecone. available in 90 days."
+CAND_0076991,34,0.9363,6.4 years experience as Analytics Engineer at Freshworks with Embeddings and Search. Engagement metrics are acceptable.
+CAND_0006970,35,0.9362,Demonstrated depth in Ranking and Embeddings across 5.3 years. Currently Senior Software Engineer at upGrad. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0006538,36,0.9358,"5.7 years as AI Specialist at Dream11, with hands-on expertise in Learning To Rank and Search. Career trajectory shows moderate upward growth."
+CAND_0081958,37,0.9356,"5.2 years as Backend Engineer at Dream11, with hands-on expertise in Embeddings and Search. Career trajectory shows strong upward growth."
+CAND_0032652,38,0.9353,"Mid-level profile with 5.1 years, currently Senior Software Engineer at Vedantu. Skilled in Embeddings and Sentence Transformers with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0094728,39,0.9351,"AI Specialist at Swiggy based in Chennai, Tamil Nadu. 6.5 years of experience with Ranking and Embeddings. immediately available."
+CAND_0076959,40,0.9349,"Strong behavioral profile: response rate 68%, GitHub activity score 65.1. Currently Software Engineer at Zoho with 7.6 years total experience in Search and Vector Search."
+CAND_0043693,41,0.9348,"Data Engineer at PolicyBazaar based in Noida, Uttar Pradesh. 6.7 years of experience with Embeddings and Weaviate. available in 120 days."
+CAND_0000859,42,0.9346,Demonstrated depth in Embeddings and Pinecone across 5.9 years. Currently Senior Software Engineer at Vedantu. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0011327,43,0.9345,Demonstrated depth in Embeddings and Sentence Transformers across 6.3 years. Currently AI Research Engineer at Krutrim. Behavioral engagement is high.
+CAND_0053527,44,0.934,"Junior ML Engineer at PhonePe based in Bangalore, Karnataka. 7.0 years of experience with Embeddings and Pinecone. available in 90 days."
+CAND_0008592,45,0.9339,"5.6 years as Senior Data Engineer at Accenture, with hands-on expertise in Haystack and Retrieval Augmented Generation. Career trajectory shows strong upward growth."
+CAND_0056176,46,0.9339,"Mid-level profile with 7.0 years, currently Senior Data Engineer at Meesho. Skilled in Embeddings and Sentence Transformers with developing career growth signals."
+CAND_0046629,47,0.9333,"Backend Engineer at Zomato based in Pune, Maharashtra. 6.1 years of experience with Search and Opensearch. immediately available."
+CAND_0046231,48,0.9328,"Backend Engineer at PolicyBazaar based in Gurgaon, Haryana. 7.4 years of experience with Embeddings and Weaviate. available in 60 days."
+CAND_0015869,49,0.9327,Demonstrated depth in Embeddings and Pgvector across 6.4 years. Currently Data Engineer at Vedantu. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0081563,50,0.9323,"6.9 years as ML Engineer at Dream11, with hands-on expertise in Embeddings and Sentence Transformers. Career trajectory shows strong upward growth."
+CAND_0048774,51,0.9318,"Mid-level profile with 7.1 years, currently Senior Data Engineer at PhonePe. Skilled in Search and Vector Search with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0002706,52,0.9317,"Strong behavioral profile: response rate 58%, GitHub activity score 78.9. Currently Junior ML Engineer at Zoho with 6.9 years total experience in Retrieval and Retrieval. Note: Long notice period (90 days) might require buyout."
+CAND_0045994,53,0.9314,"Mid-level profile with 5.7 years, currently Backend Engineer at Ola. Skilled in Retrieval and Retrieval with strong career growth signals."
+CAND_0001767,54,0.9307,8.3 years experience as Software Engineer at Flipkart with Weaviate and Pinecone. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
+CAND_0014332,55,0.9307,"7.8 years as Backend Engineer at Razorpay, with hands-on expertise in Learning To Rank and Search. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0018701,56,0.9307,"6.0 years as Junior ML Engineer at Krutrim, with hands-on expertise in Ranking and Search. Career trajectory shows strong upward growth."
+CAND_0040200,57,0.9306,Demonstrated depth in Embeddings and Weaviate across 5.5 years. Currently AI Research Engineer at PharmEasy. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0062561,58,0.9306,"Mid-level profile with 5.9 years, currently ML Engineer at Razorpay. Skilled in Learning To Rank and Embeddings with developing career growth signals."
+CAND_0065182,59,0.9306,Demonstrated depth in Embeddings and Vector Search across 5.6 years. Currently Senior Data Engineer at Paytm. Behavioral engagement is moderate.
+CAND_0043641,60,0.9305,"Strong behavioral profile: response rate 78%, GitHub activity score not available. Currently AI Specialist at Freshworks with 6.3 years total experience in Embeddings and Sentence Transformers."
+CAND_0090201,61,0.9305,"Mid-level profile with 8.0 years, currently Data Analyst at Accenture. Skilled in Weaviate and Pinecone with developing career growth signals."
+CAND_0081709,62,0.9302,"5.5 years as AI Research Engineer at PolicyBazaar, with hands-on expertise in Embeddings and Weaviate. Career trajectory shows moderate upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0095042,63,0.9301,"Mid-level profile with 5.1 years, currently Senior Software Engineer (ML) at BYJU'S. Skilled in Retrieval and Retrieval with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0070152,64,0.9299,"8.6 years as Software Engineer at Zomato, with hands-on expertise in Embeddings and Pinecone. Career trajectory shows moderate upward growth."
+CAND_0000422,65,0.9297,Demonstrated depth in Learning To Rank and Embeddings across 6.3 years. Currently AI Research Engineer at Haptik. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0027153,66,0.9296,"Strong behavioral profile: response rate 74%, GitHub activity score not available. Currently Backend Engineer at Vedantu with 7.9 years total experience in Retrieval and Retrieval. Note: Long notice period (90 days) might require buyout."
+CAND_0044378,67,0.9296,Demonstrated depth in Haystack and Retrieval Augmented Generation across 6.6 years. Currently Senior Data Engineer at Nykaa. Behavioral engagement is moderate.
+CAND_0056940,68,0.9291,7.4 years experience as Backend Engineer at Zomato with Learning To Rank and Embeddings. Engagement metrics are acceptable.
+CAND_0068776,69,0.9291,Demonstrated depth in Embeddings and Pgvector across 7.8 years. Currently Data Engineer at Unacademy. Behavioral engagement is high.
+CAND_0000165,70,0.9287,AI Specialist at Mad Street Den based in San Francisco. 6.8 years of experience with Ranking and Embeddings. available in 120 days.
+CAND_0001036,71,0.9287,"Mid-level profile with 7.7 years, currently Backend Engineer at PharmEasy. Skilled in Embeddings and Weaviate with strong career growth signals."
+CAND_0029971,72,0.9287,"Strong behavioral profile: response rate 61%, GitHub activity score 19.1. Currently Junior ML Engineer at InMobi with 5.4 years total experience in Embeddings and Sentence Transformers."
+CAND_0004848,73,0.9286,"5.7 years as Junior ML Engineer at Freshworks, with hands-on expertise in Ranking and Embeddings. Career trajectory shows strong upward growth."
+CAND_0006757,74,0.9286,"Strong behavioral profile: response rate 44%, GitHub activity score 68.5. Currently Senior Software Engineer at Unacademy with 5.4 years total experience in Embeddings and Sentence Transformers."
+CAND_0089464,75,0.9285,"Mid-level profile with 6.1 years, currently Data Engineer at Zoho. Skilled in Ranking and Embeddings with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0050301,76,0.9284,Demonstrated depth in Embeddings and Pgvector across 6.0 years. Currently Backend Engineer at Vedantu. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0044248,77,0.9283,6.9 years experience as Junior ML Engineer at upGrad with Embeddings and Sentence Transformers. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
+CAND_0001494,78,0.9282,6.4 years experience as Data Scientist at Haptik with Embeddings and Weaviate. Concern: below-average behavioral signals. Note: Long notice period (90 days) might require buyout.
+CAND_0062772,79,0.9282,"Senior Software Engineer (ML) at Vedantu based in Trivandrum, Kerala. 6.6 years of experience with Embeddings and Weaviate. available in 90 days."
+CAND_0041696,80,0.9281,6.2 years experience as Senior Software Engineer (ML) at Saarthi.ai with Embeddings and Sentence Transformers. Concern: below-average behavioral signals.
+CAND_0046890,81,0.928,Demonstrated depth in Weaviate and Pinecone across 7.3 years. Currently Backend Engineer at Meesho. Behavioral engagement is moderate.
+CAND_0042061,82,0.9277,"Backend Engineer at PolicyBazaar based in Gurgaon, Haryana. 5.6 years of experience with Learning To Rank and Embeddings. available in 60 days."
+CAND_0085754,83,0.9277,"Strong behavioral profile: response rate 57%, GitHub activity score 20.1. Currently Backend Engineer at Freshworks with 7.4 years total experience in Embeddings and Sentence Transformers."
+CAND_0054556,84,0.9276,"Software Engineer at Flipkart based in Gurgaon, Haryana. 5.8 years of experience with Retrieval and Retrieval. available in 90 days."
+CAND_0069412,85,0.9275,"6.9 years as Software Engineer at PharmEasy, with hands-on expertise in Haystack and Retrieval Augmented Generation. Career trajectory shows strong upward growth."
+CAND_0078785,86,0.9274,"6.3 years as AI Research Engineer at CRED, with hands-on expertise in Embeddings and Sentence Transformers. Career trajectory shows moderate upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0033350,87,0.9273,"6.2 years as Data Scientist at upGrad, with hands-on expertise in Ranking and Search. Career trajectory shows moderate upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0088625,88,0.9273,"Backend Engineer at BYJU'S based in Vizag, Andhra Pradesh. 7.9 years of experience with Embeddings and Pinecone. available in 60 days."
+CAND_0038631,89,0.9272,Demonstrated depth in Retrieval and Retrieval across 7.9 years. Currently Backend Engineer at PharmEasy. Behavioral engagement is moderate.
+CAND_0038923,90,0.9269,"5.4 years as Software Engineer at Swiggy, with hands-on expertise in Embeddings and Search. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0064130,91,0.9269,6.7 years experience as AI Research Engineer at Unacademy with Retrieval and Retrieval. Engagement metrics are acceptable.
+CAND_0007438,92,0.9267,"Mid-level profile with 6.7 years, currently Software Engineer at CRED. Skilled in Embeddings and Vector Search with strong career growth signals. Note: Long notice period (120 days) might require buyout."
+CAND_0091039,93,0.9263,"6.8 years as AI Specialist at Sarvam AI, with hands-on expertise in Embeddings and Search. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0089181,94,0.9258,"Mid-level profile with 7.7 years, currently Data Analyst at Accenture. Skilled in Embeddings and Weaviate with strong career growth signals."
+CAND_0031143,95,0.9257,5.5 years experience as ML Engineer at Freshworks with Embeddings and Sentence Transformers. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
+CAND_0040521,96,0.9257,"Strong behavioral profile: response rate 44%, GitHub activity score 11.1. Currently Software Engineer at Meesho with 7.9 years total experience in Embeddings and Sentence Transformers."
+CAND_0058844,97,0.9257,7.5 years experience as Software Engineer at Razorpay with Embeddings and Vector Search. Engagement metrics are acceptable.
+CAND_0026505,98,0.9256,Demonstrated depth in Embeddings and Pinecone across 5.3 years. Currently Senior Software Engineer at PhonePe. Behavioral engagement is moderate.
+CAND_0024004,99,0.9254,"Strong behavioral profile: response rate 76%, GitHub activity score 71.2. Currently Senior Software Engineer at CRED with 7.9 years total experience in Ranking and Search."
+CAND_0001081,100,0.9252,Demonstrated depth in Ranking and Search across 5.2 years. Currently Senior Data Engineer at CRED. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
