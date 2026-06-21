@@ -16,6 +16,7 @@ import re
 import argparse
 import logging
 import gzip
+import math
 from datetime import datetime
 from typing import Dict, List, Any, Tuple, Set, Optional
 
@@ -32,6 +33,89 @@ def clean_skill_name(name: str) -> str:
     if not name:
         return ""
     return name.lower().replace("-", " ").replace("_", " ").strip()
+
+def tokenize_text(text: str) -> List[str]:
+    """Cleans and tokenizes text to alphanumeric lowercase words of length >= 2."""
+    if not text:
+        return []
+    return re.findall(r"\b[a-z0-9]{2,}\b", text.lower())
+
+def extract_cand_text_for_vocab(candidate: Dict[str, Any]) -> str:
+    """Fast extraction of raw candidate text for vocabulary indexing."""
+    parts = []
+    profile = candidate.get("profile") or {}
+    parts.append(profile.get("current_title", ""))
+    parts.append(profile.get("current_company", ""))
+    parts.append(profile.get("location", ""))
+    
+    skills = candidate.get("skills") or []
+    for s in skills:
+        if s and s.get("name"):
+            parts.append(s.get("name"))
+            
+    history = candidate.get("career_history") or []
+    for job in history:
+        if job:
+            parts.append(job.get("title", ""))
+            parts.append(job.get("company", ""))
+            parts.append(job.get("description", ""))
+            
+    education = candidate.get("education") or []
+    for edu in education:
+        if edu:
+            parts.append(edu.get("degree", ""))
+            parts.append(edu.get("major", ""))
+            parts.append(edu.get("institution", ""))
+            
+    return " ".join([p for p in parts if p])
+
+class TFIDFEngine:
+    """Stage 1.5: Pure Python TF-IDF Vectorizer and Cosine Similarity Scorer"""
+    def __init__(self, vocab_words: Set[str]):
+        self.vocab = vocab_words
+        self.idf: Dict[str, float] = {}
+        self.jd_vector: Dict[str, float] = {}
+        self.jd_norm = 0.0
+
+    def compute_idf(self, df_counts: Dict[str, int], total_docs: int) -> None:
+        """Computes smooth IDF weights for all vocabulary words."""
+        for word in self.vocab:
+            df = df_counts.get(word, 0)
+            self.idf[word] = math.log((total_docs + 1.0) / (df + 1.0)) + 1.0
+
+    def set_job_description(self, jd_text: str) -> None:
+        """Vectorizes the job description and calculates its L2 norm."""
+        jd_tokens = tokenize_text(jd_text)
+        jd_tf = {word: jd_tokens.count(word) for word in self.vocab}
+        
+        self.jd_vector = {}
+        sq_sum = 0.0
+        for word in self.vocab:
+            val = jd_tf[word] * self.idf.get(word, 1.0)
+            self.jd_vector[word] = val
+            sq_sum += val * val
+        self.jd_norm = math.sqrt(sq_sum)
+
+    def calculate_similarity(self, candidate_text: str) -> float:
+        """Calculates the cosine similarity between candidate text and JD."""
+        if not self.jd_norm:
+            return 0.0
+            
+        cand_tokens = tokenize_text(candidate_text)
+        cand_tf = {word: cand_tokens.count(word) for word in self.vocab}
+        
+        dot_product = 0.0
+        cand_sq_sum = 0.0
+        for word in self.vocab:
+            cand_val = cand_tf[word] * self.idf.get(word, 1.0)
+            dot_product += self.jd_vector.get(word, 0.0) * cand_val
+            cand_sq_sum += cand_val * cand_val
+            
+        cand_norm = math.sqrt(cand_sq_sum)
+        if cand_norm == 0.0:
+            return 0.0
+            
+        return dot_product / (self.jd_norm * cand_norm)
 
 class JobDescriptionAnalyzer:
     """Stage 1: Job Description Intelligence"""
@@ -195,6 +279,26 @@ class CandidateFeatureExtractor:
             total_months = sum((job or {}).get("duration_months", 0) for job in history if job)
             avg_tenure_months = total_months / num_jobs
 
+        # Build candidate full text representation for TF-IDF Vectorization
+        text_parts = []
+        text_parts.append(title)
+        text_parts.append(company)
+        text_parts.append(location)
+        for s in skills_set.keys():
+            text_parts.append(s)
+        for job in history:
+            if job:
+                text_parts.append(job.get("title", ""))
+                text_parts.append(job.get("company", ""))
+                text_parts.append(job.get("description", ""))
+        for edu in education:
+            if edu:
+                text_parts.append(edu.get("degree", ""))
+                text_parts.append(edu.get("major", ""))
+                text_parts.append(edu.get("institution", ""))
+                
+        candidate_text = " ".join([p for p in text_parts if p])
+
         return {
             "candidate_id": candidate.get("candidate_id", ""),
             "name": name,
@@ -215,7 +319,8 @@ class CandidateFeatureExtractor:
             "history": history,
             "education": education,
             "num_jobs": num_jobs,
-            "avg_tenure_months": avg_tenure_months
+            "avg_tenure_months": avg_tenure_months,
+            "candidate_text": candidate_text
         }
 
 
@@ -379,8 +484,9 @@ class HoneypotDetector:
 
 class ScoringEngine:
     """Stage 4: scoring candidate parameters"""
-    def __init__(self, jd: JobDescriptionAnalyzer):
+    def __init__(self, jd: JobDescriptionAnalyzer, tfidf_engine: TFIDFEngine):
         self.jd = jd
+        self.tfidf_engine = tfidf_engine
 
     def calculate_score(self, features: Dict[str, Any], is_honeypot: bool) -> Tuple[float, Dict[str, float]]:
         """Computes matching score for candidate. Returns (final_score, breakdown)."""
@@ -394,43 +500,35 @@ class ScoringEngine:
             }
 
         # 1. Technical Score (40%)
-        tech_score = 0.0
-        skills = features["skills"]
+        candidate_text = features.get("candidate_text", "")
+        tfidf_similarity = self.tfidf_engine.calculate_similarity(candidate_text)
+        cosine_score = tfidf_similarity * 100.0
         
-        # Match core skills
-        matched_cores = 0
+        # Structure-based core and preferred skill matches
+        skills = features["skills"]
+        heur_score = 0.0
         for req in self.jd.required_skills:
             cleaned_req = clean_skill_name(req)
             if cleaned_req in skills:
-                matched_cores += 1
                 prof = (skills[cleaned_req].get("proficiency") or "intermediate").lower()
                 prof_mult = 1.2 if prof == "expert" else (1.0 if prof == "advanced" else 0.8)
                 dur_factor = min(skills[cleaned_req].get("duration_months") or 12, 60) / 60.0
-                tech_score += 30.0 * prof_mult * (0.5 + 0.5 * dur_factor)
+                heur_score += 20.0 * prof_mult * (0.5 + 0.5 * dur_factor)
                 
-        # Match preferred skills
-        matched_prefs = 0
         for pref in self.jd.preferred_skills:
             cleaned_pref = clean_skill_name(pref)
             if cleaned_pref in skills:
-                matched_prefs += 1
                 prof = (skills[cleaned_pref].get("proficiency") or "intermediate").lower()
                 prof_mult = 1.2 if prof == "expert" else (1.0 if prof == "advanced" else 0.8)
-                tech_score += 10.0 * prof_mult
-                
-        # Add bonus points for resume descriptions mentioning core keywords
-        desc_matches = 0
-        for job in features["history"]:
-            if not job:
-                continue
-            desc = job.get("description") or ""
-            desc = desc.lower()
-            if any(kw in desc for kw in ["retrieval", "vector", "search", "ranking", "eval"]):
-                desc_matches += 1
-        tech_score += min(desc_matches * 3.0, 15.0)
+                heur_score += 8.0 * prof_mult
+
+        heur_score = min(heur_score, 100.0)
+        
+        # Blend: 60% TF-IDF Cosine Similarity + 40% Explicit Heuristic Matching
+        tech_score = 0.60 * cosine_score + 0.40 * heur_score
 
         # Core Search/Retrieval Tech Skills Check
-        # If candidate has zero search/retrieval/vector database/indexing/embeddings skills, penalize tech score by 50%
+        # If candidate has zero search/retrieval/vector database/indexing/embeddings/rag skills, penalize tech score by 50%
         search_terms = ["embeddings", "vector", "retrieval", "search", "indexing", "ranking", "milvus", "pinecone", "weaviate", "qdrant", "elasticsearch", "lucene", "faiss", "rag", "llamaindex", "information retrieval", "ranking systems"]
         has_search_skills = any(term in skills for term in search_terms)
         if not has_search_skills:
@@ -771,55 +869,109 @@ def main():
     analyzer = JobDescriptionAnalyzer(args.job_description)
     analyzer.analyze()
 
-    scoring_engine = ScoringEngine(analyzer)
-    scored_candidates = []
+    is_gz = args.candidates.endswith(".gz")
+    open_func = gzip.open if is_gz else open
+    open_mode = "rt" if is_gz else "r"
 
-    logger.info("Processing candidates stream...")
-    count = 0
-    honeypot_count = 0
-    
+    # Read the first non-empty character to check if it's a JSON array or JSON Lines
+    first_char = ""
     try:
-        is_gz = args.candidates.endswith(".gz")
-        open_func = gzip.open if is_gz else open
-        open_mode = "rt" if is_gz else "r"
-        
-        # Read the first non-empty character to check if it's a JSON array or JSON Lines
-        first_char = ""
         with open_func(args.candidates, open_mode, encoding="utf-8") as f:
             for line in f:
                 clean = line.strip()
                 if clean:
                     first_char = clean[0]
                     break
+    except Exception as e:
+        logger.error(f"Failed to inspect candidates file: {e}")
+        sys.exit(1)
+
+    # Stage 1.5: Build TF-IDF Vocabulary and IDF
+    jd_tokens = tokenize_text(analyzer.jd_text)
+    vocab = set(jd_tokens)
+    logger.info(f"Extracting TF-IDF vocabulary from Job Description ({len(vocab)} unique tokens)...")
+
+    # Pass 1: Streaming scan of candidates to compute Document Frequencies (DF)
+    df_counts = {word: 0 for word in vocab}
+    total_docs = 0
+
+    logger.info("Pass 1: Streaming candidates to compute Document Frequencies...")
+    try:
+        with open_func(args.candidates, open_mode, encoding="utf-8") as f:
+            if first_char == "[":
+                logger.info("Parsing input as standard JSON array in Pass 1...")
+                candidates_list = json.load(f)
+                total_docs = len(candidates_list)
+                for candidate in candidates_list:
+                    if not candidate:
+                        continue
+                    text = extract_cand_text_for_vocab(candidate)
+                    cand_tokens = set(tokenize_text(text))
+                    for word in vocab:
+                        if word in cand_tokens:
+                            df_counts[word] += 1
+            else:
+                logger.info("Parsing input as streaming JSON Lines in Pass 1...")
+                for line in f:
+                    if not line.strip():
+                        continue
+                    try:
+                        candidate = json.loads(line)
+                    except Exception:
+                        continue
+                    text = extract_cand_text_for_vocab(candidate)
+                    cand_tokens = set(tokenize_text(text))
+                    for word in vocab:
+                        if word in cand_tokens:
+                            df_counts[word] += 1
+                    total_docs += 1
+        logger.info(f"Pass 1 complete. Evaluated {total_docs} candidates.")
+    except Exception as e:
+        logger.error(f"Failed during Pass 1: {e}")
+        sys.exit(1)
+
+    # Initialize TF-IDF Engine
+    tfidf_engine = TFIDFEngine(vocab)
+    tfidf_engine.compute_idf(df_counts, total_docs)
+    tfidf_engine.set_job_description(analyzer.jd_text)
+
+    # Initialize Scoring Engine with TF-IDF Engine
+    scoring_engine = ScoringEngine(analyzer, tfidf_engine)
+    scored_candidates = []
+
+    logger.info("Pass 2: Processing candidate details and scoring...")
+    count = 0
+    honeypot_count = 0
+
+    def process_candidate(candidate):
+        nonlocal count, honeypot_count
+        if not candidate or "candidate_id" not in candidate:
+            return
         
-        def process_candidate(candidate):
-            nonlocal count, honeypot_count
-            if not candidate or "candidate_id" not in candidate:
-                return
-            
-            features = CandidateFeatureExtractor.extract(candidate)
-            auth_score, is_honeypot = HoneypotDetector.detect(features)
-            if is_honeypot:
-                honeypot_count += 1
-            
-            score, breakdown = scoring_engine.calculate_score(features, is_honeypot)
-            
-            scored_candidates.append({
-                "candidate_id": features["candidate_id"],
-                "current_title": features["title"],
-                "current_company": features["company"],
-                "score": score,
-                "features": features,
-                "breakdown": breakdown,
-                "is_honeypot": is_honeypot
-            })
+        features = CandidateFeatureExtractor.extract(candidate)
+        auth_score, is_honeypot = HoneypotDetector.detect(features)
+        if is_honeypot:
+            honeypot_count += 1
+        
+        score, breakdown = scoring_engine.calculate_score(features, is_honeypot)
+        
+        scored_candidates.append({
+            "candidate_id": features["candidate_id"],
+            "current_title": features["title"],
+            "current_company": features["company"],
+            "score": score,
+            "features": features,
+            "breakdown": breakdown,
+            "is_honeypot": is_honeypot
+        })
 
-            count += 1
-            if count % 10000 == 0:
-                logger.info(f"Parsed {count} candidates... (Filtered {honeypot_count} honeypots)")
+        count += 1
+        if count % 10000 == 0:
+            logger.info(f"Parsed {count} candidates... (Filtered {honeypot_count} honeypots)")
 
+    try:
         if first_char == "[":
-            logger.info("Parsing input as standard JSON array...")
+            logger.info("Parsing input as standard JSON array in Pass 2...")
             with open_func(args.candidates, open_mode, encoding="utf-8") as f:
                 try:
                     candidates_list = json.load(f)
@@ -834,7 +986,7 @@ def main():
                         logger.error(f"Error processing candidate in JSON array: {e}")
                         continue
         else:
-            logger.info("Parsing input as streaming JSON Lines...")
+            logger.info("Parsing input as streaming JSON Lines in Pass 2...")
             with open_func(args.candidates, open_mode, encoding="utf-8") as f:
                 for line in f:
                     if not line.strip():
@@ -850,7 +1002,7 @@ def main():
                     except Exception as e:
                         logger.error(f"Error processing candidate row: {e}")
                         continue
-                    
+                        
     except Exception as e:
         logger.error(f"Failed to parse candidates input: {e}")
         sys.exit(1)
