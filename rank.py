@@ -503,6 +503,7 @@ class ScoringEngine:
         # 1. Technical Score (40%)
         candidate_text = features.get("candidate_text", "")
         tfidf_similarity = self.tfidf_engine.calculate_similarity(candidate_text)
+        logger.info(f"TF-IDF similarity for {features.get('candidate_id', 'unknown')}: {tfidf_similarity:.4f} | cosine_score={tfidf_similarity * 100.0:.2f} | has_search_skills will be checked next")
         cosine_score = tfidf_similarity * 100.0
         
         # Structure-based core and preferred skill matches
