@@ -23,7 +23,7 @@ team_members:
 github_repo: "https://github.com/Krisanth-21/CVBlitz"
 sandbox_link: "https://github.com/Krisanth-21/CVBlitz" 
 
-reproduce_command: "python rank.py --candidates candidates.jsonl --job_description job_description.txt --out submission.csv"
+reproduce_command: "python rank.py --candidates candidates.jsonl --out submission.csv"
 
 # ============================================================================
 # Compute environment
