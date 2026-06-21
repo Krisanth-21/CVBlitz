@@ -465,7 +465,8 @@ class HoneypotDetector:
             "mechanical engineer", "civil engineer", "customer support",
             "operations manager", "accountant", "project manager",
             "mobile developer", "devops engineer", "cloud engineer",
-            "full stack developer"
+            "full stack developer", ".net developer", "java developer",
+            "data analyst"
         }
         
         is_fictional_or_irrelevant = False
@@ -549,7 +550,7 @@ class ScoringEngine:
         elif 9 < exp <= 12:
             role_score += 20.0
         elif exp > 12:
-            role_score += max(10.0, 20.0 - 2.5 * (exp - 12))
+            role_score += max(0.0, 10.0 - 3.0 * (exp - 12))
         else:
             role_score += max(0.0, exp * 4.0)
 
@@ -782,7 +783,8 @@ class ReasoningGenerator:
         IRRELEVANT_SKILLS = {
             "excel", "powerpoint", "word", "tally", "photoshop",
             "illustrator", "seo", "sales", "accounting", "html", "css",
-            "angular", "react", "figma", "webpack", "tailwind"
+            "angular", "react", "figma", "webpack", "tailwind",
+            "marketing", "scrum", "agile", "redux", "dbt"
         }
         cand_skills = list(features.get("skills", {}).keys())
         relevant_skills = [s for s in cand_skills if s.lower() not in IRRELEVANT_SKILLS]
@@ -960,6 +962,8 @@ def main():
             honeypot_count += 1
         
         score, breakdown = scoring_engine.calculate_score(features, is_honeypot)
+        if count <= 5:
+            print(f"DEBUG {features['candidate_id']}: tech={breakdown['technical']:.1f} role={breakdown['role_relevance']:.1f} behavioral={breakdown['behavioral']:.1f} growth={breakdown['growth']:.1f} auth={breakdown['authenticity']:.1f} final={score:.3f}")
         
         scored_candidates.append({
             "candidate_id": features["candidate_id"],
