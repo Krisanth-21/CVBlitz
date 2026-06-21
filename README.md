@@ -8,32 +8,57 @@ CVBlitz is fully optimized to tackle the complex candidate ranking requirements 
 
 ## 🏗️ System Architecture
 
-CVBlitz is split into a robust, high-performance client-side rendering environment and a server-side route architecture powered by TanStack Start.
+CVBlitz is structured as a high-performance talent intelligence workspace, pairing a responsive recruiter frontend dashboard with a high-speed, CPU-optimized Python ranking engine.
 
+```mermaid
+graph TD
+    %% Styling
+    classDef ui fill:#eef2ff,stroke:#6366f1,stroke-width:2px,color:#1e1b4b;
+    classDef engine fill:#faf5ff,stroke:#a855f7,stroke-width:2px,color:#3b0764;
+    classDef data fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#052e16;
+    classDef check fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#431407;
+
+    subgraph UserInterface ["💻 Recruiter Dashboard (React 19 + TanStack Router)"]
+        UI[Recruiter UI Workspace]:::ui
+        UI -->|Weight Sliders| MatchConfig[Contextual Match Config]:::ui
+        UI -->|Comparative Radar Chart| RadarChart[Side-by-Side Visualizer]:::ui
+        UI -->|AI Verdict Drawer| DossierDrawer[AI Dossier Viewer]:::ui
+    end
+
+    subgraph DataSources ["📂 Challenge Datasets"]
+        JSONL[(candidates.jsonl.gz)]:::data
+        CSV[(submission.csv)]:::data
+    end
+
+    subgraph RankEngine ["⚙️ Python Core Ranking Engine (rank.py)"]
+        Stream[JSONL Stream Reader]:::engine
+        Honeypot[Honeypot & Fraud Filter]:::check
+        CKG[Concept Knowledge Graph]:::engine
+        Scorer[Weighted Scoring Engine]:::engine
+        Reasoning[Template-based Reasoning Generator]:::engine
+
+        JSONL --> Stream
+        Stream --> Honeypot
+        Honeypot -->|If Fraud| Exclude[Exclusion / Score=0.0]:::check
+        Honeypot -->|If Clean| CKG
+        CKG -->|Stemming, Synonyms, Hypernyms| Scorer
+        Scorer -->|Tech, Role, Behavioral, Growth, Authenticity| Reasoning
+        Reasoning --> CSV
+    end
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                          Recruiter UI                            │
-│  (Analysis Workspace ──► Leaderboard ──► Comparison ──► Reports) │
-└─────────────────────────────────┬────────────────────────────────┘
-                                  │
-                                  ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                   Contextual Matching Engine                     │
-│  (Real-Time Weight Configurations & Match Metrics Sliders)        │
-└─────────────────────────────────┬────────────────────────────────┘
-                                  │
-                                  ▼
-┌─────────────────────────────────┴────────────────────────────────┐
-│                   Honeypot & Fraud Detector                      │
-│ (Anachronism Checker ──► Timeline Overlaps ──► Profile Auditing)  │
-└─────────────────────────────────┬────────────────────────────────┘
-                                  │
-                                  ▼
-┌─────────────────────────────────┴────────────────────────────────┐
-│                       AI Orchestration                           │
-│        (Google Gemini 2.5 Flash API / Local Fallback)            │
-└──────────────────────────────────────────────────────────────────┘
-```
+
+### Architectural Subsystems:
+
+1.  **Frontend Dashboard (`/talent-geist-ai-main`)**:
+    *   **Recruiter UI**: Responsive interface showcasing active rank lists and side-by-side comparative matrices.
+    *   **Match Config**: Real-time slider states adjusting fit criteria on the fly.
+    *   **Dossiers**: Granular candidate profiles displaying behavioral metrics using custom SVG gauges.
+2.  **Core Python Ranking Pipeline (`rank.py`)**:
+    *   **Ingestion Stream**: Uses native streaming (`gzip` + `json`) to read and parse candidate profiles on-the-fly, maintaining a minimal memory footprint (<15MB RAM).
+    *   **Fraud Shield (Honeypot Detector)**: Screens candidates for timeline overlap (>2 months overlapping jobs) and anachronisms (e.g. PyTorch experience before its 2016 launch date).
+    *   **Concept Graph Resolver**: Employs a zero-dependency Knowledge Graph engine utilizing word stemming, synonym lookup, and category expansion (hypernymy/meronymy).
+    *   **Weighted Scoring Engine**: Calculates final scores based on Technical Fit (40%), Role Relevance (25%), Behavioral Engagement (15%), Growth (10%), and Authenticity (10%).
+
 
 ---
 
