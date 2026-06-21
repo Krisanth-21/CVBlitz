@@ -609,7 +609,7 @@ class ScoringEngine:
 
         # Location alignment check (prioritizes Pune/Noida/Delhi/Bangalore/etc., penalizes non-relocating remote candidates)
         loc_lower = (features["location"] or "").lower()
-        is_preferred_city = any(city in loc_lower for city in ["noida", "pune"])
+        is_preferred_city = any(city in loc_lower for city in ["noida", "pune", "bangalore", "bengaluru"])
         tier1_cities = ["pune", "noida", "delhi", "ncr", "mumbai", "hyderabad", "bangalore", "chennai", "gurgaon"]
         is_tier1 = any(city in loc_lower for city in tier1_cities)
         
@@ -672,9 +672,10 @@ class ScoringEngine:
         saved_score = min(float(saved_count) * 20.0, 100.0)
 
         # Combine using 8-signal behavioral formula
+        github_normalized = (github / 100.0) * 100.0 if github >= 0 else 50.0
         behavioral_score = (
             0.20 * resp +
-            0.20 * github +
+            0.20 * github_normalized +
             0.15 * interview +
             0.15 * notice_score +
             0.10 * active_score +
@@ -734,6 +735,11 @@ class ScoringEngine:
 
         # 5. Authenticity Score (10%)
         authenticity_score = 100.0
+        if features["avg_tenure_months"] < 12:
+            authenticity_score -= 20.0
+        if features["num_jobs"] > 8 and features["exp_years"] < 6:
+            authenticity_score -= 20.0
+        authenticity_score = max(authenticity_score, 50.0)
 
         # Weighted final score computation
         final_score = (
@@ -804,7 +810,7 @@ class ReasoningGenerator:
             # Template 3 — location + availability focus
             f"{name} at {company} based in {location}. "
             f"{years:.1f} years of experience with {skill_str}. "
-            f"{'immediately available' if notice <= 30 else f'available in {notice} days'}.{notice_note}",
+            f"{'immediately available' if notice <= 30 else f'available in {notice} days'}.",
 
             # Template 4 — skills depth focus
             f"Demonstrated depth in {skill_str} across {years:.1f} years. "
@@ -822,7 +828,7 @@ class ReasoningGenerator:
             f"{notice_note}"
         ]
 
-        return templates[rank % len(templates)]
+        return templates[hash(features["candidate_id"]) % len(templates)]
 
 
 class SubmissionWriter:
