@@ -1,70 +1,45 @@
-# Redrob Hackathon — Submission Metadata for CVBlitz
-#
-# Filled in following the required submission specification.
-# The fields here should match what you submit via the portal at upload time.
-
-# ============================================================================
-# Team identity
-# ============================================================================
-team_name: "Team One"  # Used in leaderboard and announcements
+team_name: "Team One"
 
 primary_contact:
   name: "Krisanth"
-  email: "krisanthkris@gmail.com"   # Used for all organizer communication
-  phone: "+91-9751903129"        # Used for top-50 / top-10 outreach (Update with your actual number)
+  email: "krisanthkris@gmail.com"
+  phone: "+91-9751903129"
 
 team_members:
   - name: "Krisanth"
     email: "krisanthkris@gmail.com"
     role: "HR Intern"
-  # Solo participant — listed just one member
-  
-# ============================================================================
-# Code and reproducibility
-# ============================================================================
+  - name: "Member 2 Full Name"
+    email: "member2@example.com"
+    role: "Backend Engineer"
+  - name: "Member 3 Full Name"
+    email: "member3@example.com"
+    role: "Frontend Engineer"
+
 github_repo: "https://github.com/Krisanth-21/CVBlitz"
-# Required. Must be reachable. Private repos OK if you can grant organizer
-# access at Stage 3.
-
 sandbox_link: "https://github.com/Krisanth-21/CVBlitz"
-# Required. A working hosted environment where the ranker can be run on a small
-# candidate sample. (Update this URL if you deploy to HuggingFace Spaces or Streamlit)
-
 reproduce_command: "python rank.py --candidates candidates.jsonl --out submission.csv"
-# The single command that produces submission.csv from candidates.jsonl.
-# Runs end-to-end in ~3.8 seconds on CPU with 16GB RAM and no network.
 
-# ============================================================================
-# Compute environment
-# ============================================================================
 compute:
-  platform: "Local Windows Box"                 # E.g. "AWS EC2 c5.4xlarge", "Local Linux box", etc.
-  cpu_cores: 10                                 # Number of CPU cores used
-  ram_gb: 16                                    # Available RAM in GB
-  python_version: "3.11.9"                      # python --version
-  os: "Windows 11 Home Single Language"         # Operating system version
-  uses_gpu_for_inference: false                 # Must be false — see compute constraints
-  has_network_during_ranking: false             # Must be false — no API calls during ranking
-  pre_computation_required: false               # true if you pre-compute embeddings or train models offline
-  pre_computation_time_minutes: 0               # Approximate, if applicable
+  platform: "Local Windows Box"
+  cpu_cores: 10
+  ram_gb: 16
+  python_version: "3.11.9"
+  os: "Windows 11 Home Single Language"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
 
-# ============================================================================
-# AI tools declaration
-# ============================================================================
-# Transparency only — declared use is NOT penalized. Be honest. Stage 5 interview
-# may verify these declarations against your code.
 ai_tools_used:
-  - "Claude"        # Used for architecture, code structure review, and optimization
-  - "Cursor"        # Used for code editing and refactoring
-  - "Gemini"        # Used via API inside the web application for job parsing
+  - "Claude"
+  - "Cursor"
+  - "Gemini"
 
 ai_usage_summary: |
   Used Claude for architecture, code structure review, and designing the optimized CPU-based pipeline.
   Used Cursor for refactoring and code alignment. No candidate data was sent to hosted APIs during execution.
 
-# ============================================================================
-# Approach summary (optional but recommended)
-# ============================================================================
 methodology_summary: |
   Highly optimized CPU-only ranking engine executing in ~30 seconds for 100k candidates.
   Applies strict chronological checks and technological timeline thresholds (e.g. PyTorch release age)
@@ -72,12 +47,9 @@ methodology_summary: |
   weighted model balancing technical alignment, role seniority level, behavioral signals (recruiter response and Git activity), 
   career velocity (promotions and title seniority), and location relevance. Deterministic tie-breaker is applied using candidate ID.
 
-# ============================================================================
-# Declarations
-# ============================================================================
 declarations:
-  read_submission_spec: true        # I have read submission_spec.md in full
-  code_is_original_work: true       # My code is my team's original work (using AI as a tool is fine)
-  no_collusion: true                # I have not coordinated my submission with other teams
-  honeypot_check_done: true         # Set true as we explicitly checked for honeypots in our ranking
-  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
