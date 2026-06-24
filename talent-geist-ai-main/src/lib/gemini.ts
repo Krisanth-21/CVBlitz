@@ -53,7 +53,7 @@ export const SAMPLE_CANDIDATES: Candidate[] = [
     name: cc.profile.anonymized_name,
     role: cc.profile.current_title,
     experienceYears: cc.profile.years_of_experience,
-    skills: cc.skills.map((s) => s.name),
+    skills: cc.skills.map((s: any) => s.name),
     recentCompany: cc.profile.current_company,
     education: cc.education.length > 0
       ? `${cc.education[0].degree} in ${cc.education[0].field_of_study}, ${cc.education[0].institution}`
@@ -70,7 +70,7 @@ export const SAMPLE_CANDIDATES: Candidate[] = [
         ? Math.round(cc.redrob_signals.interview_completion_rate * 100) 
         : Math.round(cc.redrob_signals.interview_completion_rate) || 80,
     },
-    timeline: cc.career_history.map((ch) => ({
+    timeline: cc.career_history.map((ch: any) => ({
       role: ch.title,
       company: ch.company,
       period: `${ch.start_date.substring(0, 4)} - ${ch.end_date ? ch.end_date.substring(0, 4) : "Present"}`
