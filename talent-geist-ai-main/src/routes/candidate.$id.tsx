@@ -34,6 +34,11 @@ import {
 import { CandidateAnalysisResult, SAMPLE_CANDIDATES } from "../lib/gemini";
 import { CHALLENGE_CANDIDATES, ChallengeCandidate, CHALLENGE_JD } from "../lib/challengeCandidates";
 import { toast } from "sonner";
+import TOP100_PROFILES from "../lib/top100_profiles.json";
+
+const ACTIVE_CANDIDATE_DATA = (TOP100_PROFILES && TOP100_PROFILES.length > 0)
+  ? (TOP100_PROFILES as any[])
+  : CHALLENGE_CANDIDATES;
 
 export const Route = createFileRoute("/candidate/$id")({
   component: CandidateReportPage,
@@ -476,7 +481,7 @@ function CandidateReportPage() {
       setCandidate(found);
       
       // Look up original challenge details
-      const details = CHALLENGE_CANDIDATES.find((cc) => cc.candidate_id === found.id);
+      const details = ACTIVE_CANDIDATE_DATA.find((cc) => cc.candidate_id === found.id);
       if (details) {
         setChallengeDetails(details);
       } else if (MOCK_SPECIAL_CANDIDATES[found.id]) {
