@@ -6,19 +6,19 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "CVBlitz AI"  # Used in leaderboard and announcements
+team_name: "Team One"  # Used in leaderboard and announcements
 
 primary_contact:
-  name: "Kris"
+  name: "Krisanth"
   email: "krisanthkris@gmail.com"   # Used for all organizer communication
-  phone: "+91-9876543210"        # Used for top-50 / top-10 outreach (Update with your actual number)
+  phone: "+91-9751903129"        # Used for top-50 / top-10 outreach (Update with your actual number)
 
 team_members:
-  - name: "Kris"
+  - name: "Krisanth"
     email: "krisanthkris@gmail.com"
-    role: "ML & Systems Engineer"
+    role: "HR Intern"
   # Solo participant — listed just one member
-
+  
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
