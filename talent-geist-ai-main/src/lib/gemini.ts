@@ -1,6 +1,7 @@
 // Gemini API Utility for CVBlitz
 // API Key provided: AQ.Ab8RN6Klm4oZTlt7vNE4JnuZKJjoUevcP1EqwLr6dqX78bWHmQ
 import { CHALLENGE_CANDIDATES, CHALLENGE_JD } from "./challengeCandidates";
+import TOP100_PROFILES from "./top100_profiles.json";
 
 const GEMINI_API_KEY = (import.meta.env.VITE_GEMINI_API_KEY as string) || "AQ.Ab8RN6Klm4oZTlt7vNE4JnuZKJjoUevcP1EqwLr6dqX78bWHmQ";
 const BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
@@ -42,8 +43,12 @@ export interface CandidateAnalysisResult {
 }
 
 // Populate sample candidates using the challenge data and inject one Honeypot profile.
+const ACTIVE_CANDIDATE_DATA = (TOP100_PROFILES && TOP100_PROFILES.length > 0)
+  ? (TOP100_PROFILES as any[])
+  : CHALLENGE_CANDIDATES;
+
 export const SAMPLE_CANDIDATES: Candidate[] = [
-  ...CHALLENGE_CANDIDATES.map((cc) => ({
+  ...ACTIVE_CANDIDATE_DATA.map((cc) => ({
     id: cc.candidate_id,
     name: cc.profile.anonymized_name,
     role: cc.profile.current_title,
