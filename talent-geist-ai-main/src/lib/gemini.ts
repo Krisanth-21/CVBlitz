@@ -198,6 +198,9 @@ export async function extractRequirements(jobDescription: string): Promise<strin
     return [];
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 seconds timeout
+
   try {
     const prompt = `
 You are an expert technical recruiter. Analyze the following job description and extract 5 to 7 core technical skills, technologies, or concepts required.
@@ -213,6 +216,7 @@ Job Description:
       headers: {
         "Content-Type": "application/json",
       },
+      signal: controller.signal,
       body: JSON.stringify({
         contents: [
           {
@@ -225,6 +229,8 @@ Job Description:
         }
       })
     });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       throw new Error(`Gemini API error: ${response.statusText}`);
@@ -241,6 +247,7 @@ Job Description:
     }
     throw new Error("Invalid response format");
   } catch (e) {
+    clearTimeout(timeoutId);
     console.warn("Failed to call Gemini API for requirements, using fallback regex parser.", e);
     
     // Simple regex fallback
@@ -288,6 +295,9 @@ export async function analyzeCandidates(
     locationFitWeight: number;
   }
 ): Promise<CandidateAnalysisResult[]> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 seconds timeout
+
   try {
     const prompt = `
 You are CVBlitz's contextual talent intelligence engine, scoring and ranking candidates based on a Job Description and custom recruiters config.
@@ -342,6 +352,7 @@ Response format MUST be a valid JSON array of objects with the exact schema belo
       headers: {
         "Content-Type": "application/json",
       },
+      signal: controller.signal,
       body: JSON.stringify({
         contents: [
           {
@@ -354,6 +365,8 @@ Response format MUST be a valid JSON array of objects with the exact schema belo
         }
       })
     });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       throw new Error(`Gemini API error: ${response.statusText}`);
@@ -404,6 +417,7 @@ Response format MUST be a valid JSON array of objects with the exact schema belo
     }
     throw new Error("Invalid response JSON structure");
   } catch (e) {
+    clearTimeout(timeoutId);
     console.warn("Failed to rank candidates via Gemini, using fallback ranking engine.", e);
     return getFallbackAnalysis(jobDescription, config);
   }
