@@ -6,16 +6,16 @@ primary_contact:
   phone: "+91-9751903129"
 
 team_members:
-  - name: "Krisanth"
+  - name: "Krisanth M"
     email: "krisanthkris@gmail.com"
-    role: "HR Intern"
-  - name: "Member 2 Full Name"
-    email: "member2@example.com"
-    role: "Backend Engineer"
-  - name: "Member 3 Full Name"
-    email: "member3@example.com"
+    role: "Data Engineer"
+  - name: "Darshan U"
+    email: "darshanuthayakumar@gmail.com"
+    role: "your role"
+  - name: "Lochan Pradeep K"
+    email: "shreekannan293@gmail.com"
     role: "Frontend Engineer"
-
+ 
 github_repo: "https://github.com/Krisanth-21/CVBlitz"
 sandbox_link: "https://github.com/Krisanth-21/CVBlitz"
 reproduce_command: "python rank.py --candidates candidates.jsonl --out submission.csv"
@@ -33,12 +33,14 @@ compute:
 
 ai_tools_used:
   - "Claude"
-  - "Cursor"
   - "Gemini"
+  - "ChatGPT"
+  - "Antigravity"
+
 
 ai_usage_summary: |
   Used Claude for architecture, code structure review, and designing the optimized CPU-based pipeline.
-  Used Cursor for refactoring and code alignment. No candidate data was sent to hosted APIs during execution.
+  Used Antigravity for refactoring and code alignment. No candidate data was sent to hosted APIs during execution.
 
 methodology_summary: |
   Highly optimized CPU-only ranking engine executing in ~30 seconds for 100k candidates.
