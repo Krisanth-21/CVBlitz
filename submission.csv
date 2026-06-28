@@ -1,101 +1,101 @@
 candidate_id,rank,score,reasoning
-CAND_0032887,1,0.9537,6.1 years experience as ML Engineer at Niramai with Llamaindex and Embeddings. Engagement metrics are acceptable.
-CAND_0060392,2,0.9509,5.2 years experience as Backend Engineer at Meesho with Embeddings and Hugging Face Transformers. Engagement metrics are acceptable.
-CAND_0017516,3,0.948,"6.6 years as Senior Data Engineer at Zomato, with hands-on expertise in Embeddings and Sentence-Transformers. Career trajectory shows strong upward growth."
-CAND_0081480,4,0.948,"Strong behavioral profile: response rate 85%, GitHub activity score 61.1. Currently Computer Vision Engineer at Sarvam AI with 5.6 years total experience in Embeddings and Information Retrieval."
-CAND_0066479,5,0.946,Senior Software Engineer at Flipkart based in San Francisco. 6.1 years of experience with Embeddings and Sentence-Transformers. immediately available.
-CAND_0049540,6,0.9447,"6.8 years as ML Engineer at Saarthi.ai, with hands-on expertise in Embeddings and Hugging Face Transformers. Career trajectory shows moderate upward growth."
-CAND_0098624,7,0.9445,"Strong behavioral profile: response rate 27%, GitHub activity score 47.4. Currently Senior Software Engineer (ML) at CRED with 6.3 years total experience in Embeddings and Sentence-Transformers."
-CAND_0021488,8,0.9443,"6.5 years as Data Engineer at Nykaa, with hands-on expertise in Llamaindex and Retrieval. Career trajectory shows strong upward growth."
-CAND_0093916,9,0.9442,"Strong behavioral profile: response rate 60%, GitHub activity score not available. Currently Data Engineer at Meesho with 7.7 years total experience in Embeddings and Qdrant."
-CAND_0094197,10,0.9442,"Mid-level profile with 6.6 years, currently Software Engineer at InMobi. Skilled in Embeddings and Qdrant with strong career growth signals."
-CAND_0035321,11,0.9437,"Strong behavioral profile: response rate 71%, GitHub activity score 63.0. Currently Senior Data Engineer at Flipkart with 7.2 years total experience in Llamaindex and Embeddings."
-CAND_0096104,12,0.9428,"7.0 years as AI Specialist at Yellow.ai, with hands-on expertise in Embeddings and Sentence-Transformers. Career trajectory shows strong upward growth."
-CAND_0048558,13,0.9426,6.7 years experience as Data Scientist at Rephrase.ai with Embeddings and Retrieval. Engagement metrics are acceptable.
-CAND_0011489,14,0.9417,"Strong behavioral profile: response rate 47%, GitHub activity score 79.3. Currently ML Engineer at Glance with 5.8 years total experience in Llamaindex and Embeddings."
-CAND_0064116,15,0.9414,"Strong behavioral profile: response rate 68%, GitHub activity score not available. Currently Senior Software Engineer at Flipkart with 6.1 years total experience in Embeddings and Sentence-Transformers."
-CAND_0064123,16,0.9411,"Mid-level profile with 5.4 years, currently Data Engineer at Meesho. Skilled in Opensearch and Search with strong career growth signals."
-CAND_0094165,17,0.9406,"Strong behavioral profile: response rate 78%, GitHub activity score 82.2. Currently AI Research Engineer at PhonePe with 5.8 years total experience in Embeddings and Retrieval. Note: Long notice period (90 days) might require buyout."
-CAND_0097567,18,0.9401,6.3 years experience as Software Engineer at PharmEasy with Embeddings and Hugging Face Transformers. Engagement metrics are acceptable.
-CAND_0067535,19,0.9399,"6.8 years as Junior ML Engineer at Locobuzz, with hands-on expertise in Retrieval and Rag. Career trajectory shows moderate upward growth."
-CAND_0091552,20,0.9398,Demonstrated depth in Retrieval and Rag across 7.8 years. Currently Software Engineer at Zomato. Behavioral engagement is high.
-CAND_0025882,21,0.9396,"Senior Software Engineer (ML) at Freshworks based in Chennai, Tamil Nadu. 5.6 years of experience with Embeddings and Qdrant. available in 45 days."
-CAND_0061969,22,0.9396,"6.7 years as Senior Data Engineer at Swiggy, with hands-on expertise in Embeddings and Search. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
-CAND_0068910,23,0.9395,"Mid-level profile with 5.7 years, currently Senior Software Engineer at Ola. Skilled in Embeddings and Milvus with strong career growth signals."
-CAND_0093341,24,0.9395,5.5 years experience as Software Engineer at Swiggy with Opensearch and Search. Engagement metrics are acceptable.
-CAND_0003572,25,0.9392,Demonstrated depth in Embeddings and Search across 7.9 years. Currently Software Engineer at Flipkart. Behavioral engagement is moderate.
-CAND_0084460,26,0.9387,"Senior Software Engineer (ML) at upGrad based in Gurgaon, Haryana. 5.6 years of experience with Embeddings and Pinecone. available in 60 days."
-CAND_0018013,27,0.9385,"Strong behavioral profile: response rate 78%, GitHub activity score not available. Currently AI Specialist at Sarvam AI with 6.7 years total experience in Llamaindex and Retrieval. Note: Long notice period (90 days) might require buyout."
-CAND_0086154,28,0.9376,6.8 years experience as Data Scientist at Ola with Embeddings and Qdrant. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
-CAND_0071941,29,0.9375,"5.2 years as Software Engineer at Razorpay, with hands-on expertise in Retrieval and Search. Career trajectory shows moderate upward growth."
-CAND_0025302,30,0.9373,6.8 years experience as Senior Data Engineer at Vedantu with Llamaindex and Haystack. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
-CAND_0020017,31,0.9372,"7.0 years as Senior Software Engineer at Unacademy, with hands-on expertise in Embeddings and Sentence-Transformers. Career trajectory shows strong upward growth."
-CAND_0041913,32,0.9372,"7.8 years as Software Engineer at Razorpay, with hands-on expertise in Retrieval and Search. Career trajectory shows strong upward growth."
-CAND_0080291,33,0.9367,"Strong behavioral profile: response rate 85%, GitHub activity score not available. Currently Junior ML Engineer at Ola with 6.5 years total experience in Retrieval and Qdrant. Note: Long notice period (90 days) might require buyout."
-CAND_0076991,34,0.9363,Demonstrated depth in Embeddings and Search across 6.4 years. Currently Analytics Engineer at Freshworks. Behavioral engagement is high.
-CAND_0006970,35,0.9362,"Mid-level profile with 5.3 years, currently Senior Software Engineer at upGrad. Skilled in Embeddings and Retrieval with strong career growth signals. Note: Long notice period (90 days) might require buyout."
-CAND_0006538,36,0.9358,Demonstrated depth in Information Retrieval and Opensearch across 5.7 years. Currently AI Specialist at Dream11. Behavioral engagement is high.
-CAND_0081958,37,0.9356,"5.2 years as Backend Engineer at Dream11, with hands-on expertise in Embeddings and Information Retrieval. Career trajectory shows strong upward growth."
-CAND_0032652,38,0.9353,Demonstrated depth in Embeddings and Hugging Face Transformers across 5.1 years. Currently Senior Software Engineer at Vedantu. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
-CAND_0094728,39,0.9351,Demonstrated depth in Llamaindex and Embeddings across 6.5 years. Currently AI Specialist at Swiggy. Behavioral engagement is moderate.
-CAND_0076959,40,0.9349,Software Engineer at Zoho based in Austin. 7.6 years of experience with Opensearch and Search. available in 60 days.
-CAND_0043693,41,0.9348,"Strong behavioral profile: response rate 78%, GitHub activity score 57.5. Currently Data Engineer at PolicyBazaar with 6.7 years total experience in Embeddings and Qdrant. Note: Long notice period (120 days) might require buyout."
-CAND_0000859,42,0.9346,"Mid-level profile with 5.9 years, currently Senior Software Engineer at Vedantu. Skilled in Embeddings and Pinecone with strong career growth signals. Note: Long notice period (90 days) might require buyout."
-CAND_0011327,43,0.9345,"Mid-level profile with 6.3 years, currently AI Research Engineer at Krutrim. Skilled in Embeddings and Hugging Face Transformers with developing career growth signals."
-CAND_0053527,44,0.934,"Junior ML Engineer at PhonePe based in Bangalore, Karnataka. 7.0 years of experience with Embeddings and Qdrant. available in 90 days."
-CAND_0008592,45,0.9339,"Strong behavioral profile: response rate 19%, GitHub activity score 68.8. Currently Senior Data Engineer at Accenture with 5.6 years total experience in Llamaindex and Haystack."
-CAND_0056176,46,0.9339,"Strong behavioral profile: response rate 75%, GitHub activity score not available. Currently Senior Data Engineer at Meesho with 7.0 years total experience in Embeddings and Sentence-Transformers."
-CAND_0046629,47,0.9333,"Mid-level profile with 6.1 years, currently Backend Engineer at Zomato. Skilled in Information Retrieval and Opensearch with strong career growth signals."
-CAND_0046231,48,0.9328,Demonstrated depth in Embeddings and Weaviate across 7.4 years. Currently Backend Engineer at PolicyBazaar. Behavioral engagement is high.
-CAND_0015869,49,0.9327,"Mid-level profile with 6.4 years, currently Data Engineer at Vedantu. Skilled in Embeddings and Vector Database with strong career growth signals. Note: Long notice period (90 days) might require buyout."
-CAND_0081563,50,0.9323,"6.9 years as ML Engineer at Dream11, with hands-on expertise in Embeddings and Hugging Face Transformers. Career trajectory shows strong upward growth."
-CAND_0048774,51,0.9318,"7.1 years as Senior Data Engineer at PhonePe, with hands-on expertise in Opensearch and Search. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
-CAND_0002706,52,0.9317,6.9 years experience as Junior ML Engineer at Zoho with Retrieval and Haystack. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
-CAND_0045994,53,0.9314,"Strong behavioral profile: response rate 44%, GitHub activity score 61.2. Currently Backend Engineer at Ola with 5.7 years total experience in Retrieval and Rag."
-CAND_0001767,54,0.9307,Demonstrated depth in Qdrant and Weaviate across 8.3 years. Currently Software Engineer at Flipkart. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
-CAND_0014332,55,0.9307,"Strong behavioral profile: response rate 69%, GitHub activity score not available. Currently Backend Engineer at Razorpay with 7.8 years total experience in Information Retrieval and Opensearch. Note: Long notice period (120 days) might require buyout."
-CAND_0018701,56,0.9307,"Mid-level profile with 6.0 years, currently Junior ML Engineer at Krutrim. Skilled in Retrieval and Opensearch with strong career growth signals."
-CAND_0040200,57,0.9306,"5.5 years as AI Research Engineer at PharmEasy, with hands-on expertise in Llamaindex and Embeddings. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
-CAND_0062561,58,0.9306,"Mid-level profile with 5.9 years, currently ML Engineer at Razorpay. Skilled in Embeddings and Retrieval with developing career growth signals."
-CAND_0065182,59,0.9306,Demonstrated depth in Embeddings and Qdrant across 5.6 years. Currently Senior Data Engineer at Paytm. Behavioral engagement is moderate.
-CAND_0043641,60,0.9305,"Mid-level profile with 6.3 years, currently AI Specialist at Freshworks. Skilled in Embeddings and Sentence-Transformers with developing career growth signals."
-CAND_0090201,61,0.9305,Demonstrated depth in Qdrant and Weaviate across 8.0 years. Currently Data Analyst at Accenture. Behavioral engagement is high.
-CAND_0081709,62,0.9302,Demonstrated depth in Embeddings and Weaviate across 5.5 years. Currently AI Research Engineer at PolicyBazaar. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
-CAND_0095042,63,0.9301,"Senior Software Engineer (ML) at BYJU'S based in Bangalore, Karnataka. 5.1 years of experience with Llamaindex and Retrieval. available in 90 days."
-CAND_0070152,64,0.9299,8.6 years experience as Software Engineer at Zomato with Embeddings and Opensearch. Engagement metrics are acceptable.
-CAND_0000422,65,0.9297,"AI Research Engineer at Haptik based in Kolkata, West Bengal. 6.3 years of experience with Embeddings and Information Retrieval. available in 90 days."
-CAND_0027153,66,0.9296,Demonstrated depth in Retrieval and Haystack across 7.9 years. Currently Backend Engineer at Vedantu. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
-CAND_0044378,67,0.9296,Demonstrated depth in Llamaindex and Haystack across 6.6 years. Currently Senior Data Engineer at Nykaa. Behavioral engagement is moderate.
-CAND_0056940,68,0.9291,Demonstrated depth in Embeddings and Sentence-Transformers across 7.4 years. Currently Backend Engineer at Zomato. Behavioral engagement is moderate.
-CAND_0068776,69,0.9291,"Mid-level profile with 7.8 years, currently Data Engineer at Unacademy. Skilled in Llamaindex and Embeddings with strong career growth signals."
-CAND_0000165,70,0.9287,"6.8 years as AI Specialist at Mad Street Den, with hands-on expertise in Embeddings and Hugging Face Transformers. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
-CAND_0001036,71,0.9287,"Mid-level profile with 7.7 years, currently Backend Engineer at PharmEasy. Skilled in Embeddings and Weaviate with strong career growth signals."
-CAND_0029971,72,0.9287,"Mid-level profile with 5.4 years, currently Junior ML Engineer at InMobi. Skilled in Embeddings and Sentence-Transformers with developing career growth signals."
-CAND_0004848,73,0.9286,"Mid-level profile with 5.7 years, currently Junior ML Engineer at Freshworks. Skilled in Embeddings and Information Retrieval with strong career growth signals."
-CAND_0006757,74,0.9286,"Strong behavioral profile: response rate 44%, GitHub activity score 68.5. Currently Senior Software Engineer at Unacademy with 5.4 years total experience in Embeddings and Sentence-Transformers."
-CAND_0089464,75,0.9285,"Strong behavioral profile: response rate 73%, GitHub activity score 62.8. Currently Data Engineer at Zoho with 6.1 years total experience in Embeddings and Retrieval. Note: Long notice period (90 days) might require buyout."
-CAND_0050301,76,0.9284,Backend Engineer at Vedantu based in Berlin. 6.0 years of experience with Embeddings and Vector Database. available in 90 days.
-CAND_0044248,77,0.9283,6.9 years experience as Junior ML Engineer at upGrad with Embeddings and Sentence-Transformers. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
-CAND_0001494,78,0.9282,"Data Scientist at Haptik based in Kochi, Kerala. 6.4 years of experience with Llamaindex and Embeddings. available in 90 days."
-CAND_0062772,79,0.9282,"Mid-level profile with 6.6 years, currently Senior Software Engineer (ML) at Vedantu. Skilled in Embeddings and Information Retrieval with developing career growth signals. Note: Long notice period (90 days) might require buyout."
-CAND_0041696,80,0.9281,"Senior Software Engineer (ML) at Saarthi.ai based in Hyderabad, Telangana. 6.2 years of experience with Embeddings and Hugging Face Transformers. available in 60 days."
-CAND_0046890,81,0.928,7.3 years experience as Backend Engineer at Meesho with Qdrant and Weaviate. Concern: below-average behavioral signals.
-CAND_0042061,82,0.9277,"Mid-level profile with 5.6 years, currently Backend Engineer at PolicyBazaar. Skilled in Embeddings and Information Retrieval with strong career growth signals."
-CAND_0085754,83,0.9277,"Backend Engineer at Freshworks based in Delhi, Delhi. 7.4 years of experience with Embeddings and Sentence-Transformers. available in 60 days."
-CAND_0054556,84,0.9276,"Software Engineer at Flipkart based in Gurgaon, Haryana. 5.8 years of experience with Llamaindex and Retrieval. available in 90 days."
+CAND_0032887,1,0.9537,Demonstrated depth in Opensearch and Opensearch across 6.1 years. Currently ML Engineer at Niramai. Behavioral engagement is high.
+CAND_0060392,2,0.9509,"Mid-level profile with 5.2 years, currently Backend Engineer at Meesho. Skilled in Sentence Transformers and Hugging Face Transformers with strong career growth signals."
+CAND_0017516,3,0.948,Demonstrated depth in Sentence Transformers and Hugging Face Transformers across 6.6 years. Currently Senior Data Engineer at Zomato. Behavioral engagement is moderate.
+CAND_0081480,4,0.948,"Strong behavioral profile: response rate 85%, GitHub activity score 61.1. Currently Computer Vision Engineer at Sarvam AI with 5.6 years total experience in Opensearch and Opensearch."
+CAND_0066479,5,0.946,"Strong behavioral profile: response rate 65%, GitHub activity score 36.3. Currently Senior Software Engineer at Flipkart with 6.1 years total experience in Sentence Transformers and Huggingface."
+CAND_0049540,6,0.9447,"6.8 years as ML Engineer at Saarthi.ai, with hands-on expertise in Vector Search and Sentence Transformers. Career trajectory shows moderate upward growth."
+CAND_0098624,7,0.9445,6.3 years experience as Senior Software Engineer (ML) at CRED with Opensearch and Opensearch. Concern: below-average behavioral signals.
+CAND_0021488,8,0.9443,"6.5 years as Data Engineer at Nykaa, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth."
+CAND_0093916,9,0.9442,Demonstrated depth in Opensearch and Opensearch across 7.7 years. Currently Data Engineer at Meesho. Behavioral engagement is moderate.
+CAND_0094197,10,0.9442,"Mid-level profile with 6.6 years, currently Software Engineer at InMobi. Skilled in Vector Search and Embeddings with strong career growth signals."
+CAND_0035321,11,0.9437,"Senior Data Engineer at Flipkart based in Indore, Madhya Pradesh. 7.2 years of experience with Vector Search and Llamaindex. immediately available."
+CAND_0096104,12,0.9428,"Mid-level profile with 7.0 years, currently AI Specialist at Yellow.ai. Skilled in Vector Search and Sentence Transformers with strong career growth signals."
+CAND_0048558,13,0.9426,"6.7 years as Data Scientist at Rephrase.ai, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows moderate upward growth."
+CAND_0011489,14,0.9417,"Mid-level profile with 5.8 years, currently ML Engineer at Glance. Skilled in Python2 and Vector Search with strong career growth signals."
+CAND_0064116,15,0.9414,"6.1 years as Senior Software Engineer at Flipkart, with hands-on expertise in Sentence Transformers and Huggingface. Career trajectory shows strong upward growth."
+CAND_0064123,16,0.9411,5.4 years experience as Data Engineer at Meesho with Opensearch and Opensearch. Engagement metrics are acceptable.
+CAND_0094165,17,0.9406,"Strong behavioral profile: response rate 78%, GitHub activity score 82.2. Currently AI Research Engineer at PhonePe with 5.8 years total experience in Vector Search and Haystack. Note: Long notice period (90 days) might require buyout."
+CAND_0097567,18,0.9401,Demonstrated depth in Sentence Transformers and Hugging Face Transformers across 6.3 years. Currently Software Engineer at PharmEasy. Behavioral engagement is high.
+CAND_0067535,19,0.9399,6.8 years experience as Junior ML Engineer at Locobuzz with Langchain and Retrieval. Engagement metrics are acceptable.
+CAND_0091552,20,0.9398,"Strong behavioral profile: response rate 72%, GitHub activity score 27.2. Currently Software Engineer at Zomato with 7.8 years total experience in Langchain and Retrieval."
+CAND_0025882,21,0.9396,5.6 years experience as Senior Software Engineer (ML) at Freshworks with Opensearch and Opensearch. Engagement metrics are acceptable.
+CAND_0061969,22,0.9396,"Strong behavioral profile: response rate 79%, GitHub activity score 40.2. Currently Senior Data Engineer at Swiggy with 6.7 years total experience in Python2 and Vector Search. Note: Long notice period (90 days) might require buyout."
+CAND_0068910,23,0.9395,"Senior Software Engineer at Ola based in Noida, Uttar Pradesh. 5.7 years of experience with Vector Search and Milvus. available in 60 days."
+CAND_0093341,24,0.9395,"Mid-level profile with 5.5 years, currently Software Engineer at Swiggy. Skilled in Opensearch and Opensearch with strong career growth signals."
+CAND_0003572,25,0.9392,"Software Engineer at Flipkart based in Mumbai, Maharashtra. 7.9 years of experience with Vector Search and Search. available in 60 days."
+CAND_0084460,26,0.9387,"Mid-level profile with 5.6 years, currently Senior Software Engineer (ML) at upGrad. Skilled in Vector Search and Milvus with strong career growth signals."
+CAND_0018013,27,0.9385,"Strong behavioral profile: response rate 78%, GitHub activity score not available. Currently AI Specialist at Sarvam AI with 6.7 years total experience in Opensearch and Opensearch. Note: Long notice period (90 days) might require buyout."
+CAND_0086154,28,0.9376,"Data Scientist at Ola based in Ahmedabad, Gujarat. 6.8 years of experience with Opensearch and Opensearch. available in 90 days."
+CAND_0071941,29,0.9375,5.2 years experience as Software Engineer at Razorpay with Bm25 and Retrieval. Engagement metrics are acceptable.
+CAND_0025302,30,0.9373,"Senior Data Engineer at Vedantu based in Bangalore, Karnataka. 6.8 years of experience with Llamaindex and Learning To Rank. available in 90 days."
+CAND_0020017,31,0.9372,7.0 years experience as Senior Software Engineer at Unacademy with Sentence Transformers and Huggingface. Concern: below-average behavioral signals.
+CAND_0041913,32,0.9372,Demonstrated depth in Bm25 and Retrieval across 7.8 years. Currently Software Engineer at Razorpay. Behavioral engagement is high.
+CAND_0080291,33,0.9367,"Strong behavioral profile: response rate 85%, GitHub activity score not available. Currently Junior ML Engineer at Ola with 6.5 years total experience in Opensearch and Opensearch. Note: Long notice period (90 days) might require buyout."
+CAND_0076991,34,0.9363,Demonstrated depth in Vector Search and Search across 6.4 years. Currently Analytics Engineer at Freshworks. Behavioral engagement is high.
+CAND_0006970,35,0.9362,5.3 years experience as Senior Software Engineer at upGrad with Vector Search and Bm25. Engagement metrics are acceptable. Note: Long notice period (90 days) might require buyout.
+CAND_0006538,36,0.9358,Demonstrated depth in Opensearch and Opensearch across 5.7 years. Currently AI Specialist at Dream11. Behavioral engagement is high.
+CAND_0081958,37,0.9356,Demonstrated depth in Opensearch and Opensearch across 5.2 years. Currently Backend Engineer at Dream11. Behavioral engagement is high.
+CAND_0032652,38,0.9353,"Mid-level profile with 5.1 years, currently Senior Software Engineer at Vedantu. Skilled in Sentence Transformers and Hugging Face Transformers with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0094728,39,0.9351,"Strong behavioral profile: response rate 48%, GitHub activity score 68.1. Currently AI Specialist at Swiggy with 6.5 years total experience in Opensearch and Opensearch."
+CAND_0076959,40,0.9349,"Strong behavioral profile: response rate 68%, GitHub activity score 65.1. Currently Software Engineer at Zoho with 7.6 years total experience in Opensearch and Python2."
+CAND_0043693,41,0.9348,"6.7 years as Data Engineer at PolicyBazaar, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0000859,42,0.9346,"5.9 years as Senior Software Engineer at Vedantu, with hands-on expertise in Vector Search and Pinecone. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0011327,43,0.9345,"6.3 years as AI Research Engineer at Krutrim, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows moderate upward growth."
+CAND_0053527,44,0.934,"Strong behavioral profile: response rate 81%, GitHub activity score not available. Currently Junior ML Engineer at PhonePe with 7.0 years total experience in Vector Search and Pinecone. Note: Long notice period (90 days) might require buyout."
+CAND_0008592,45,0.9339,Demonstrated depth in Python2 and Llamaindex across 5.6 years. Currently Senior Data Engineer at Accenture. Behavioral engagement is moderate.
+CAND_0056176,46,0.9339,"Mid-level profile with 7.0 years, currently Senior Data Engineer at Meesho. Skilled in Opensearch and Opensearch with developing career growth signals."
+CAND_0046629,47,0.9333,"6.1 years as Backend Engineer at Zomato, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth."
+CAND_0046231,48,0.9328,"Backend Engineer at PolicyBazaar based in Gurgaon, Haryana. 7.4 years of experience with Vector Search and Embeddings. available in 60 days."
+CAND_0015869,49,0.9327,Demonstrated depth in Vector Search and Embeddings across 6.4 years. Currently Data Engineer at Vedantu. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0081563,50,0.9323,"Strong behavioral profile: response rate 59%, GitHub activity score 44.4. Currently ML Engineer at Dream11 with 6.9 years total experience in Vector Search and Sentence Transformers."
+CAND_0048774,51,0.9318,"Mid-level profile with 7.1 years, currently Senior Data Engineer at PhonePe. Skilled in Opensearch and Opensearch with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0002706,52,0.9317,"Strong behavioral profile: response rate 58%, GitHub activity score 78.9. Currently Junior ML Engineer at Zoho with 6.9 years total experience in Haystack and Retrieval. Note: Long notice period (90 days) might require buyout."
+CAND_0045994,53,0.9314,5.7 years experience as Backend Engineer at Ola with Python2 and Langchain. Engagement metrics are acceptable.
+CAND_0001767,54,0.9307,"Senior-level profile with 8.3 years, currently Software Engineer at Flipkart. Skilled in Opensearch and Opensearch with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0014332,55,0.9307,"7.8 years as Backend Engineer at Razorpay, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0018701,56,0.9307,6.0 years experience as Junior ML Engineer at Krutrim with Opensearch and Opensearch. Engagement metrics are acceptable.
+CAND_0040200,57,0.9306,"Strong behavioral profile: response rate 52%, GitHub activity score not available. Currently AI Research Engineer at PharmEasy with 5.5 years total experience in Python2 and Vector Search. Note: Long notice period (90 days) might require buyout."
+CAND_0062561,58,0.9306,"ML Engineer at Razorpay based in Bhubaneswar, Odisha. 5.9 years of experience with Vector Search and Bm25. immediately available."
+CAND_0065182,59,0.9306,"Strong behavioral profile: response rate 61%, GitHub activity score not available. Currently Senior Data Engineer at Paytm with 5.6 years total experience in Vector Search and Embeddings."
+CAND_0043641,60,0.9305,"Strong behavioral profile: response rate 78%, GitHub activity score not available. Currently AI Specialist at Freshworks with 6.3 years total experience in Opensearch and Python2."
+CAND_0090201,61,0.9305,"Data Analyst at Accenture based in Pune, Maharashtra. 8.0 years of experience with Opensearch and Opensearch. immediately available."
+CAND_0081709,62,0.9302,"AI Research Engineer at PolicyBazaar based in Jaipur, Rajasthan. 5.5 years of experience with Vector Search and Embeddings. available in 90 days."
+CAND_0095042,63,0.9301,Demonstrated depth in Llamaindex and Llamaindex across 5.1 years. Currently Senior Software Engineer (ML) at BYJU'S. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0070152,64,0.9299,Demonstrated depth in Opensearch and Opensearch across 8.6 years. Currently Software Engineer at Zomato. Behavioral engagement is high.
+CAND_0000422,65,0.9297,Demonstrated depth in Opensearch and Python2 across 6.3 years. Currently AI Research Engineer at Haptik. Behavioral engagement is high. Note: Long notice period (90 days) might require buyout.
+CAND_0027153,66,0.9296,"Mid-level profile with 7.9 years, currently Backend Engineer at Vedantu. Skilled in Haystack and Retrieval with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0044378,67,0.9296,"Mid-level profile with 6.6 years, currently Senior Data Engineer at Nykaa. Skilled in Llamaindex and Haystack with developing career growth signals."
+CAND_0056940,68,0.9291,"Backend Engineer at Zomato based in Vizag, Andhra Pradesh. 7.4 years of experience with Vector Search and Sentence Transformers. immediately available."
+CAND_0068776,69,0.9291,"7.8 years as Data Engineer at Unacademy, with hands-on expertise in Vector Search and Llamaindex. Career trajectory shows strong upward growth."
+CAND_0000165,70,0.9287,"6.8 years as AI Specialist at Mad Street Den, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0001036,71,0.9287,Demonstrated depth in Vector Search and Search across 7.7 years. Currently Backend Engineer at PharmEasy. Behavioral engagement is high.
+CAND_0029971,72,0.9287,Demonstrated depth in Vector Search and Sentence Transformers across 5.4 years. Currently Junior ML Engineer at InMobi. Behavioral engagement is moderate.
+CAND_0004848,73,0.9286,"Strong behavioral profile: response rate 32%, GitHub activity score not available. Currently Junior ML Engineer at Freshworks with 5.7 years total experience in Vector Search and Bm25."
+CAND_0006757,74,0.9286,Demonstrated depth in Sentence Transformers and Hugging Face Transformers across 5.4 years. Currently Senior Software Engineer at Unacademy. Behavioral engagement is moderate.
+CAND_0089464,75,0.9285,"Data Engineer at Zoho based in Noida, Uttar Pradesh. 6.1 years of experience with Vector Search and Bm25. available in 90 days."
+CAND_0050301,76,0.9284,"Mid-level profile with 6.0 years, currently Backend Engineer at Vedantu. Skilled in Vector Search and Embeddings with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0044248,77,0.9283,"Strong behavioral profile: response rate 77%, GitHub activity score 22.8. Currently Junior ML Engineer at upGrad with 6.9 years total experience in Opensearch and Opensearch. Note: Long notice period (120 days) might require buyout."
+CAND_0001494,78,0.9282,Demonstrated depth in Opensearch and Opensearch across 6.4 years. Currently Data Scientist at Haptik. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
+CAND_0062772,79,0.9282,"Senior Software Engineer (ML) at Vedantu based in Trivandrum, Kerala. 6.6 years of experience with Opensearch and Opensearch. available in 90 days."
+CAND_0041696,80,0.9281,6.2 years experience as Senior Software Engineer (ML) at Saarthi.ai with Vector Search and Sentence Transformers. Concern: below-average behavioral signals.
+CAND_0046890,81,0.928,Demonstrated depth in Opensearch and Python2 across 7.3 years. Currently Backend Engineer at Meesho. Behavioral engagement is moderate.
+CAND_0042061,82,0.9277,5.6 years experience as Backend Engineer at PolicyBazaar with Vector Search and Learning To Rank. Concern: below-average behavioral signals.
+CAND_0085754,83,0.9277,"7.4 years as Backend Engineer at Freshworks, with hands-on expertise in Opensearch and Opensearch. Career trajectory shows strong upward growth."
+CAND_0054556,84,0.9276,"Strong behavioral profile: response rate 78%, GitHub activity score 25.3. Currently Software Engineer at Flipkart with 5.8 years total experience in Llamaindex and Llamaindex. Note: Long notice period (90 days) might require buyout."
 CAND_0069412,85,0.9275,"Mid-level profile with 6.9 years, currently Software Engineer at PharmEasy. Skilled in Llamaindex and Haystack with strong career growth signals."
-CAND_0078785,86,0.9274,6.3 years experience as AI Research Engineer at CRED with Embeddings and Sentence-Transformers. Engagement metrics are acceptable. Note: Long notice period (120 days) might require buyout.
-CAND_0033350,87,0.9273,"Strong behavioral profile: response rate 85%, GitHub activity score not available. Currently Data Scientist at upGrad with 6.2 years total experience in Retrieval and Opensearch. Note: Long notice period (90 days) might require buyout."
-CAND_0088625,88,0.9273,"7.9 years as Backend Engineer at BYJU'S, with hands-on expertise in Embeddings and Pinecone. Career trajectory shows strong upward growth."
-CAND_0038631,89,0.9272,Demonstrated depth in Llamaindex and Retrieval across 7.9 years. Currently Backend Engineer at PharmEasy. Behavioral engagement is moderate.
-CAND_0038923,90,0.9269,Demonstrated depth in Embeddings and Search across 5.4 years. Currently Software Engineer at Swiggy. Behavioral engagement is moderate. Note: Long notice period (90 days) might require buyout.
-CAND_0064130,91,0.9269,"Mid-level profile with 6.7 years, currently AI Research Engineer at Unacademy. Skilled in Retrieval and Haystack with developing career growth signals."
-CAND_0007438,92,0.9267,"6.7 years as Software Engineer at CRED, with hands-on expertise in Embeddings and Qdrant. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
-CAND_0091039,93,0.9263,"Strong behavioral profile: response rate 87%, GitHub activity score not available. Currently AI Specialist at Sarvam AI with 6.8 years total experience in Llamaindex and Embeddings. Note: Long notice period (120 days) might require buyout."
-CAND_0089181,94,0.9258,"Strong behavioral profile: response rate 80%, GitHub activity score 71.0. Currently Data Analyst at Accenture with 7.7 years total experience in Embeddings and Weaviate."
-CAND_0031143,95,0.9257,"Strong behavioral profile: response rate 84%, GitHub activity score 76.0. Currently ML Engineer at Freshworks with 5.5 years total experience in Embeddings and Sentence-Transformers. Note: Long notice period (120 days) might require buyout."
-CAND_0040521,96,0.9257,7.9 years experience as Software Engineer at Meesho with Llamaindex and Embeddings. Engagement metrics are acceptable.
-CAND_0058844,97,0.9257,"7.5 years as Software Engineer at Razorpay, with hands-on expertise in Embeddings and Qdrant. Career trajectory shows moderate upward growth."
-CAND_0026505,98,0.9256,Demonstrated depth in Embeddings and Pinecone across 5.3 years. Currently Senior Software Engineer at PhonePe. Behavioral engagement is moderate.
-CAND_0024004,99,0.9254,"Strong behavioral profile: response rate 76%, GitHub activity score 71.2. Currently Senior Software Engineer at CRED with 7.9 years total experience in Information Retrieval and Search."
-CAND_0001081,100,0.9252,"Mid-level profile with 5.2 years, currently Senior Data Engineer at CRED. Skilled in Information Retrieval and Search with strong career growth signals. Note: Long notice period (90 days) might require buyout."
+CAND_0078785,86,0.9274,"AI Research Engineer at CRED based in Chandigarh, Chandigarh. 6.3 years of experience with Opensearch and Opensearch. available in 120 days."
+CAND_0033350,87,0.9273,"Strong behavioral profile: response rate 85%, GitHub activity score not available. Currently Data Scientist at upGrad with 6.2 years total experience in Opensearch and Opensearch. Note: Long notice period (90 days) might require buyout."
+CAND_0088625,88,0.9273,7.9 years experience as Backend Engineer at BYJU'S with Vector Search and Pinecone. Engagement metrics are acceptable.
+CAND_0038631,89,0.9272,Demonstrated depth in Llamaindex and Llamaindex across 7.9 years. Currently Backend Engineer at PharmEasy. Behavioral engagement is moderate.
+CAND_0038923,90,0.9269,"5.4 years as Software Engineer at Swiggy, with hands-on expertise in Vector Search and Search. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
+CAND_0064130,91,0.9269,"Mid-level profile with 6.7 years, currently AI Research Engineer at Unacademy. Skilled in Python2 and Haystack with developing career growth signals."
+CAND_0007438,92,0.9267,6.7 years experience as Software Engineer at CRED with Vector Search and Embeddings. Concern: below-average behavioral signals. Note: Long notice period (120 days) might require buyout.
+CAND_0091039,93,0.9263,"6.8 years as AI Specialist at Sarvam AI, with hands-on expertise in Python2 and Vector Search. Career trajectory shows strong upward growth. Note: Long notice period (120 days) might require buyout."
+CAND_0089181,94,0.9258,"7.7 years as Data Analyst at Accenture, with hands-on expertise in Vector Search and Embeddings. Career trajectory shows strong upward growth."
+CAND_0031143,95,0.9257,Demonstrated depth in Python2 and Sentence Transformers across 5.5 years. Currently ML Engineer at Freshworks. Behavioral engagement is high. Note: Long notice period (120 days) might require buyout.
+CAND_0040521,96,0.9257,"Strong behavioral profile: response rate 44%, GitHub activity score 11.1. Currently Software Engineer at Meesho with 7.9 years total experience in Vector Search and Llamaindex."
+CAND_0058844,97,0.9257,Software Engineer at Razorpay based in Singapore. 7.5 years of experience with Vector Search and Embeddings. immediately available.
+CAND_0026505,98,0.9256,"Strong behavioral profile: response rate 48%, GitHub activity score not available. Currently Senior Software Engineer at PhonePe with 5.3 years total experience in Vector Search and Pinecone."
+CAND_0024004,99,0.9254,7.9 years experience as Senior Software Engineer at CRED with Bm25 and Information Retrieval. Engagement metrics are acceptable.
+CAND_0001081,100,0.9252,"5.2 years as Senior Data Engineer at CRED, with hands-on expertise in Bm25 and Information Retrieval. Career trajectory shows strong upward growth. Note: Long notice period (90 days) might require buyout."
